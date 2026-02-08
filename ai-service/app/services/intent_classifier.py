@@ -6,9 +6,10 @@ class IntentClassifier:
     
     # Predefined FAQs (you'll expand this)
     FAQ_DATABASE = {
-        "hours": "We're open Monday-Friday, 9 AM - 6 PM.",
-        "contact": "Email: info@tikamed.com | Phone: +123-456-7890",
-        "location": "We're headquartered in [Your City].",
+    "hours": "We're open Monday-Friday, 9 AM - 6 PM.",
+    "contact": "Email: info@tikamed.com | Phone: +123-456-7890",
+    "location": "We're headquartered in Sallanches, France.",
+    "where": "We're headquartered in Sallanches, France.",  # Add this
     }
     
     # Keywords that trigger RAG search
@@ -20,7 +21,8 @@ class IntentClassifier:
     # Keywords that need web search
     WEB_SEARCH_KEYWORDS = [
         "latest research", "recent study", "news", 
-        "compared to", "industry standard"
+        "compared to", "industry standard",
+        "what is", "define", "definition", "explain"  # Add these
     ]
     
     @staticmethod

@@ -2,13 +2,14 @@ from fastapi import APIRouter, HTTPException
 from app.models.schemas import ChatRequest, ChatResponse, SourceDocument
 from app.services.intent_classifier import IntentClassifier
 from app.services.rag_service import RAGService
+from app.services.web_search_service import WebSearchService
 import uuid
-from datetime import datetime
 
 router = APIRouter(prefix="/api/v1", tags=["chat"])
 
 # Initialize services
 rag_service = RAGService()
+web_search_service = WebSearchService()
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
@@ -41,28 +42,46 @@ async def chat(request: ChatRequest):
             # Use your RAG service
             rag_response = rag_service.answer_question(request.message)
             
+            # Check if results are relevant enough
+            sources = rag_response.get("sources", [])
+            best_score = min([s["score"] for s in sources]) if sources else 1.0
+            
+            # If best match is too irrelevant, fallback to web search
+            if best_score > 0.65:  # Changed from 0.5 to 0.65
+                print(f"⚠️ RAG results not relevant (score: {best_score:.2f}), falling back to web search")
+                web_response = web_search_service.search_and_answer(request.message)
+                
+                return ChatResponse(
+                    answer=web_response["answer"],
+                    response_type="web_search",
+                    sources=None,
+                    conversation_id=conv_id
+                )
+            
             # Convert sources to SourceDocument models
-            sources = [
+            formatted_sources = [
                 SourceDocument(
                     content=doc["content"],
                     page=doc.get("page"),
                     score=doc["score"]
                 )
-                for doc in rag_response.get("sources", [])
+                for doc in sources
             ]
             
             return ChatResponse(
                 answer=rag_response["answer"],
                 response_type="rag",
-                sources=sources,
+                sources=formatted_sources,
                 conversation_id=conv_id
             )
         
         elif intent == "web_search":
-            # Placeholder for web search (implement later)
+            # Use web search service
+            web_response = web_search_service.search_and_answer(request.message)
+            
             return ChatResponse(
-                answer="Web search functionality coming soon. For now, try asking about our products!",
-                response_type="fallback",
+                answer=web_response["answer"],
+                response_type="web_search",
                 sources=None,
                 conversation_id=conv_id
             )
