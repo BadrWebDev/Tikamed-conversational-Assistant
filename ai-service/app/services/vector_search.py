@@ -1,6 +1,9 @@
 # app/services/vector_search.py
 
 import os
+import warnings
+warnings.filterwarnings('ignore', category=FutureWarning)
+
 import google.generativeai as genai
 import chromadb
 from chromadb.config import Settings
@@ -11,62 +14,48 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 class VectorSearch:
     def __init__(self):
-        # Connect to existing ChromaDB
         self.client = chromadb.PersistentClient(
             path="vector_store",
             settings=Settings(anonymized_telemetry=False)
         )
-        
-        # Get the collection we created earlier
         self.collection = self.client.get_collection(name="tikamed_products")
     
     def search(self, query: str, top_k: int = 3):
-        """
-        Search for similar chunks to the query
-        
-        Args:
-            query: User's question
-            top_k: How many results to return (default 3)
-            
-        Returns:
-            List of matching text chunks
-        """
-        # Convert query to embedding
         query_embedding = self._get_gemini_embedding(query)
-        
-        # Search ChromaDB
         results = self.collection.query(
             query_embeddings=[query_embedding],
             n_results=top_k
         )
         
-        # Extract just the text chunks
-        chunks = results['documents'][0] if results['documents'] else []
-        
-        return chunks
+        formatted_results = []
+        if results['documents'] and results['documents'][0]:
+            for i, doc in enumerate(results['documents'][0]):
+                formatted_results.append({
+                    "content": doc,
+                    "score": results['distances'][0][i] if results.get('distances') else 0.0,
+                    "metadata": results['metadatas'][0][i] if results.get('metadatas') else {}
+                })
+        return formatted_results
     
     def _get_gemini_embedding(self, text: str):
-        """Convert text to embedding using Gemini"""
         result = genai.embed_content(
             model="models/gemini-embedding-001",
             content=text,
-            task_type="retrieval_query"  # Note: "query" not "document"
+            task_type="retrieval_query"
         )
         return result['embedding']
 
 
-# Test it!
+# Test
 if __name__ == "__main__":
     searcher = VectorSearch()
-    
-    # Test query
     question = "Do you have healing abutments 1.5mm?"
     print(f"🔍 Searching for: {question}\n")
     
-    chunks = searcher.search(question, top_k=3)
+    results = searcher.search(question, top_k=3)
+    print(f"✅ Found {len(results)} relevant chunks:\n")
     
-    print(f"✅ Found {len(chunks)} relevant chunks:\n")
-    for i, chunk in enumerate(chunks, 1):
-        print(f"--- CHUNK {i} ---")
-        print(chunk[:300] + "...")  # First 300 chars
+    for i, result in enumerate(results, 1):
+        print(f"--- CHUNK {i} (Score: {result['score']:.4f}) ---")
+        print(result['content'][:300] + "...")
         print()

@@ -2,38 +2,35 @@
 
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
+from google import genai
 import chromadb
 from chromadb.config import Settings
 from app.services.pdf_processor import PDFProcessor
 
-# Load environment variables
 load_dotenv()
-
-# Configure Gemini
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 class EmbeddingsManager:
     def __init__(self):
-        # Path to vector store
+        # Initialize NEW Gemini client
+        self.genai_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
+        
+        # Vector store path
         self.vector_store_path = "vector_store"
         
-        # Create ChromaDB client (persistent storage)
-        self.client = chromadb.PersistentClient(
+        # Create ChromaDB client
+        self.chroma_client = chromadb.PersistentClient(
             path=self.vector_store_path,
             settings=Settings(anonymized_telemetry=False)
         )
         
         # Create or get collection
-        self.collection = self.client.get_or_create_collection(
+        self.collection = self.chroma_client.get_or_create_collection(
             name="tikamed_products",
             metadata={"description": "Dental prosthetic products catalogue"}
         )
     
     def create_embeddings(self, pdf_path):
-        """
-        Main function: Load PDF → Chunk → Embed → Store
-        """
+        """Load PDF → Chunk → Embed → Store"""
         print(f"📄 Loading and chunking PDF: {pdf_path}")
         processor = PDFProcessor()
         chunks = processor.load_and_chunk_pdf(pdf_path)
@@ -42,7 +39,7 @@ class EmbeddingsManager:
         print("\n🔄 Creating embeddings and storing in ChromaDB...")
         
         for i, chunk in enumerate(chunks):
-            # Get embedding from Gemini
+            # Get embedding
             embedding = self._get_gemini_embedding(chunk)
             
             # Store in ChromaDB
@@ -60,17 +57,15 @@ class EmbeddingsManager:
         print(f"📁 Vector store saved to: {self.vector_store_path}/")
     
     def _get_gemini_embedding(self, text):
-        """
-        Convert text to embedding using Gemini (OLD SDK)
-        """
-        result = genai.embed_content(
-            model="models/gemini-embedding-001",
-            content=text,
-            task_type="retrieval_document"
+        """Get embedding using NEW SDK"""
+        response = self.genai_client.models.generate_embedding(
+            model='models/text-embedding-004',
+            content=text
         )
-        return result['embedding']
+        return response.embedding.values
 
-# Test function
+
+# Test
 if __name__ == "__main__":
     manager = EmbeddingsManager()
     manager.create_embeddings("data/Prosthetic_Guide_BoneLEVEL_ETK_EN_TOPRINT.pdf")
