@@ -9,7 +9,8 @@ class IntentClassifier:
     "hours": "We're open Monday-Friday, 9 AM - 6 PM.",
     "contact": "Email: info@tikamed.com | Phone: +123-456-7890",
     "location": "We're headquartered in Sallanches, France.",
-    "where": "We're headquartered in Sallanches, France.",  # Add this
+    "where": "We're headquartered in Sallanches, France.",
+    "hi": "Hello! How can I help you today?"
     }
     
     # Keywords that trigger RAG search
