@@ -2,18 +2,16 @@
 
 import os
 from dotenv import load_dotenv
-from google import genai
+import google.generativeai as genai
 import chromadb
 from chromadb.config import Settings
-from app.services.pdf_processor import PDFProcessor
+from app.services.semantic_pdf_processor import SemanticPDFProcessor
 
 load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 class EmbeddingsManager:
     def __init__(self):
-        # Initialize NEW Gemini client
-        self.genai_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
-        
         # Vector store path
         self.vector_store_path = "vector_store"
         
@@ -26,28 +24,40 @@ class EmbeddingsManager:
         # Create or get collection
         self.collection = self.chroma_client.get_or_create_collection(
             name="tikamed_products",
-            metadata={"description": "Dental prosthetic products catalogue"}
+            metadata={"description": "Dental prosthetic products catalogue - Semantic Chunking"}
         )
     
     def create_embeddings(self, pdf_path):
-        """Load PDF → Chunk → Embed → Store"""
-        print(f"📄 Loading and chunking PDF: {pdf_path}")
-        processor = PDFProcessor()
+        """Load PDF → Semantic Chunk → Embed → Store"""
+        print(f"📄 Loading and chunking PDF with semantic processor: {pdf_path}")
+        processor = SemanticPDFProcessor()
         chunks = processor.load_and_chunk_pdf(pdf_path)
-        print(f"✅ Created {len(chunks)} chunks")
+        print(f"✅ Created {len(chunks)} semantic chunks")
         
         print("\n🔄 Creating embeddings and storing in ChromaDB...")
         
         for i, chunk in enumerate(chunks):
-            # Get embedding
-            embedding = self._get_gemini_embedding(chunk)
+            # Extract text content from semantic chunk dict
+            chunk_text = chunk["content"]
+            chunk_metadata = chunk["metadata"]
             
-            # Store in ChromaDB
+            # Get embedding
+            embedding = self._get_gemini_embedding(chunk_text)
+            
+            # Store in ChromaDB with enriched metadata
+            metadata = {
+                "source": pdf_path,
+                "chunk_index": i,
+                "page": chunk_metadata.get("page"),
+                "section": chunk_metadata.get("section", ""),
+                "type": chunk_metadata.get("type", "text")
+            }
+            
             self.collection.add(
                 ids=[f"chunk_{i}"],
                 embeddings=[embedding],
-                documents=[chunk],
-                metadatas=[{"source": pdf_path, "chunk_index": i}]
+                documents=[chunk_text],
+                metadatas=[metadata]
             )
             
             if (i + 1) % 5 == 0:
@@ -57,12 +67,13 @@ class EmbeddingsManager:
         print(f"📁 Vector store saved to: {self.vector_store_path}/")
     
     def _get_gemini_embedding(self, text):
-        """Get embedding using NEW SDK"""
-        response = self.genai_client.models.generate_embedding(
-            model='models/text-embedding-004',
-            content=text
+        """Get embedding using OLD SDK (same as vector_search.py)"""
+        result = genai.embed_content(
+            model="models/gemini-embedding-001",
+            content=text,
+            task_type="retrieval_document"
         )
-        return response.embedding.values
+        return result['embedding']
 
 
 # Test

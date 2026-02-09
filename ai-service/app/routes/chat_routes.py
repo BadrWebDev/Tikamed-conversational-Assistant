@@ -5,6 +5,8 @@ from app.services.rag_service import RAGService
 from app.services.web_search_service import WebSearchService
 import uuid
 
+print("🚀 CHAT ROUTES MODULE LOADED - NEW VERSION WITH DEBUGGING")
+
 router = APIRouter(prefix="/api/v1", tags=["chat"])
 
 # Initialize services
@@ -27,6 +29,7 @@ async def chat(request: ChatRequest):
         
         # Classify the question
         intent = IntentClassifier.classify(request.message)
+        print(f"🔍 Query: '{request.message}' → Intent: {intent}")
         
         # Handle based on intent
         if intent == "faq":
@@ -46,8 +49,16 @@ async def chat(request: ChatRequest):
             sources = rag_response.get("sources", [])
             best_score = min([s["score"] for s in sources]) if sources else 1.0
             
+            # Use more lenient threshold for product code queries
+            import re
+            has_product_code = any(re.search(pattern, request.message.upper()) 
+                                 for pattern in IntentClassifier.PRODUCT_CODE_PATTERNS)
+            threshold = 0.70 if has_product_code else 0.55
+            
+            print(f"📊 RAG best score: {best_score:.4f} | Threshold: {threshold:.2f} | Has product code: {has_product_code}")
+            
             # If best match is too irrelevant, fallback to web search
-            if best_score > 0.65:  # Changed from 0.5 to 0.65
+            if best_score > threshold:
                 print(f"⚠️ RAG results not relevant (score: {best_score:.2f}), falling back to web search")
                 web_response = web_search_service.search_and_answer(request.message)
                 
