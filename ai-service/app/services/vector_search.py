@@ -4,23 +4,25 @@ import os
 import warnings
 warnings.filterwarnings('ignore', category=FutureWarning)
 
-import google.generativeai as genai
+from openai import OpenAI
 import chromadb
 from chromadb.config import Settings
 from dotenv import load_dotenv
-from concurrent.futures import ThreadPoolExecutor, TimeoutError as FuturesTimeoutError
 
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 class VectorSearch:
     def __init__(self):
+        # OpenAI client for embeddings
+        self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.embedding_model = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
+        
+        # ChromaDB client
         self.client = chromadb.PersistentClient(
             path="vector_store",
             settings=Settings(anonymized_telemetry=False)
         )
         self.collection = self.client.get_collection(name="tikamed_products")
-        self.embedding_timeout = 10  # 10 seconds for embedding generation
     
     def search(self, query: str, top_k: int = 3):
         """Hybrid search: Product code matching + semantic search"""
@@ -62,7 +64,7 @@ class VectorSearch:
         
         # Fall back to semantic search
         print("🔍 Using semantic search...")
-        query_embedding = self._get_gemini_embedding(query)
+        query_embedding = self._get_openai_embedding(query)
         results = self.collection.query(
             query_embeddings=[query_embedding],
             n_results=top_k
@@ -78,22 +80,17 @@ class VectorSearch:
                 })
         return formatted_results
     
-    def _get_gemini_embedding(self, text: str):
-        """Generate embedding with timeout protection"""
-        with ThreadPoolExecutor(max_workers=1) as executor:
-            future = executor.submit(
-                genai.embed_content,
-                model="models/gemini-embedding-001",
-                content=text,
-                task_type="retrieval_query"
+    def _get_openai_embedding(self, text: str):
+        """Generate embedding using OpenAI"""
+        try:
+            response = self.openai_client.embeddings.create(
+                model=self.embedding_model,
+                input=text
             )
-            
-            try:
-                result = future.result(timeout=self.embedding_timeout)
-                return result['embedding']
-            except FuturesTimeoutError:
-                print(f"⏱️ Embedding generation timeout after {self.embedding_timeout}s")
-                raise TimeoutError("Embedding generation took too long")
+            return response.data[0].embedding
+        except Exception as e:
+            print(f"❌ OpenAI embedding error: {str(e)}")
+            raise
 
 
 # Test

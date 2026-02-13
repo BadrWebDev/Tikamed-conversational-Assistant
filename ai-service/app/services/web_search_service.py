@@ -16,15 +16,24 @@ class WebSearchService:
         """Search the web and generate an answer using Gemini's grounding"""
         print(f"🌐 Web search for: {question}")
         
+        # Create concise prompt
+        prompt = f"""Answer this question briefly and concisely in 2-4 sentences. Focus only on the key points.
+
+Question: {question}
+
+Provide a short, direct answer."""
+        
         try:
             # Use ThreadPoolExecutor with timeout to prevent hanging
             with ThreadPoolExecutor(max_workers=1) as executor:
                 future = executor.submit(
                     self.client.models.generate_content,
                     model=self.model_name,
-                    contents=question,
+                    contents=prompt,
                     config=types.GenerateContentConfig(
-                        tools=[types.Tool(google_search=types.GoogleSearch())]
+                        tools=[types.Tool(google_search=types.GoogleSearch())],
+                        max_output_tokens=300,  # Limit response length
+                        temperature=0.5  # Lower temperature for focused answers
                     )
                 )
                 

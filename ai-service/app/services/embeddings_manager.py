@@ -2,16 +2,19 @@
 
 import os
 from dotenv import load_dotenv
-import google.generativeai as genai
+from openai import OpenAI
 import chromadb
 from chromadb.config import Settings
 from app.services.semantic_pdf_processor import SemanticPDFProcessor
 
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 class EmbeddingsManager:
     def __init__(self):
+        # OpenAI client for embeddings
+        self.openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        self.embedding_model = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
+        
         # Vector store path
         self.vector_store_path = "vector_store"
         
@@ -42,7 +45,7 @@ class EmbeddingsManager:
             chunk_metadata = chunk["metadata"]
             
             # Get embedding
-            embedding = self._get_gemini_embedding(chunk_text)
+            embedding = self._get_openai_embedding(chunk_text)
             
             # Store in ChromaDB with enriched metadata
             metadata = {
@@ -66,14 +69,13 @@ class EmbeddingsManager:
         print(f"\n✅ Stored {len(chunks)} embeddings in ChromaDB!")
         print(f"📁 Vector store saved to: {self.vector_store_path}/")
     
-    def _get_gemini_embedding(self, text):
-        """Get embedding using OLD SDK (same as vector_search.py)"""
-        result = genai.embed_content(
-            model="models/gemini-embedding-001",
-            content=text,
-            task_type="retrieval_document"
+    def _get_openai_embedding(self, text):
+        """Get embedding using OpenAI text-embedding-3-small"""
+        response = self.openai_client.embeddings.create(
+            model=self.embedding_model,
+            input=text
         )
-        return result['embedding']
+        return response.data[0].embedding
 
 
 # Test
