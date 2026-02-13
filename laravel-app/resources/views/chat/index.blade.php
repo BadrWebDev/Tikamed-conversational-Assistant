@@ -2255,12 +2255,41 @@
             animation: none !important;
         }
 
+        /* Mobile Backdrop Overlay */
+        .chat-mobile-backdrop {
+            display: none;
+        }
+
         /* Mobile Responsive Styles */
         @media (max-width: 768px) {
+            /* Show backdrop on mobile when chat is open */
+            .chat-mobile-backdrop {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(4px);
+                z-index: 10001;
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
             /* Position chat widget beside WhatsApp button - perfectly aligned */
             .chat-widget-container {
                 bottom: 20px;
                 right: 95px; /* Position beside WhatsApp icon (20px + 55px + 20px spacing) */
+                z-index: 10002;
             }
 
             /* Make chat toggle button match WhatsApp exactly */
@@ -2292,17 +2321,42 @@
                 margin: 0;
             }
 
-            /* Adjust chat window for mobile - full width with proper margins */
+            /* Adjust chat window for mobile - fullscreen app experience (90% viewport) */
             .chat-window {
-                position: fixed;
-                width: calc(100vw - 32px);
-                max-width: 100vw;
-                height: calc(100vh - 100px);
-                bottom: 16px;
-                right: 16px;
-                left: 16px;
-                transform-origin: bottom center;
-                box-shadow: 0 8px 32px rgba(124, 58, 237, 0.25), 0 4px 16px rgba(0, 0, 0, 0.15);
+                position: fixed !important;
+                width: 95vw !important;
+                height: 90vh !important;
+                max-width: 95vw;
+                max-height: 90vh;
+                top: 50% !important;
+                left: 50% !important;
+                right: auto !important;
+                bottom: auto !important;
+                transform: translate(-50%, -50%) !important;
+                transform-origin: center;
+                border-radius: 16px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(124, 58, 237, 0.2);
+                z-index: 10003;
+            }
+
+            /* Override animations for mobile to maintain centering */
+            @keyframes chatWindowEnterMobile {
+                0% {
+                    opacity: 0;
+                    transform: translate(-50%, -50%) scale(0.95);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+            }
+
+            .chat-window-enter {
+                animation: chatWindowEnterMobile 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
+            }
+
+            .chat-window.chat-window-enter {
+                transform: translate(-50%, -50%) scale(1) !important;
             }
         }
 
@@ -2323,18 +2377,22 @@
                 height: 24px;
             }
 
+            /* Even more fullscreen on very small phones */
             .chat-window {
-                bottom: 10px;
-                right: 10px;
-                left: 10px;
-                width: calc(100vw - 20px);
-                height: calc(100vh - 80px);
+                width: 96vw;
+                height: 92vh;
+                max-width: 96vw;
+                max-height: 92vh;
+                border-radius: 12px;
             }
         }
     </style>
 
     <!-- Chat Widget HTML -->
     <div x-data="chatWidget()" x-cloak class="chat-widget-container" id="chatWidgetRoot">
+
+        <!-- Mobile Backdrop (only visible on mobile when chat is open) -->
+        <div x-show="isOpen" @click="toggleChat()" x-transition class="chat-mobile-backdrop"></div>
 
         <button @click="toggleChat()" x-show="!isOpen" x-transition:enter="chat-btn-enter"
             x-transition:leave="chat-btn-leave" class="chat-toggle-btn">
