@@ -20,7 +20,8 @@ class ChatController extends Controller
         ]);
 
         try {
-            $response = Http::timeout(30)->post('http://127.0.0.1:8000/api/v1/chat', [
+            // Use 45 second timeout (gives backend 30s + 15s buffer)
+            $response = Http::timeout(45)->post('http://127.0.0.1:8000/api/v1/chat', [
                 'message' => $request->message,
                 'conversation_id' => session()->getId()
             ]);
@@ -35,7 +36,7 @@ class ChatController extends Controller
 
         } catch (\Exception $e) {
             Log::error('Chat API Error: ' . $e->getMessage());
-            
+
             return response()->json([
                 'error' => 'Error connecting to AI service: ' . $e->getMessage()
             ], 500);
