@@ -1345,7 +1345,7 @@
         /* Styles pour le bouton WhatsApp flottant */
         .whatsapp-float {
             position: fixed;
-            bottom: 25px;
+            bottom: 12px;
             right: 25px;
             z-index: 10004;
         }
@@ -1592,7 +1592,7 @@
 
         .chat-widget-container {
             position: fixed;
-            bottom: 24px;
+            bottom: 12px;
             right: 120px;
             z-index: 10002;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -1612,6 +1612,7 @@
             border: none;
             border-radius: 50px;
             padding: 14px 24px;
+            height: 60px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -1625,9 +1626,12 @@
         }
 
         @keyframes pulse-glow {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35), 0 0 0 0 rgba(124, 58, 237, 0.3);
             }
+
             50% {
                 box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35), 0 0 15px 4px rgba(124, 58, 237, 0.15);
             }
@@ -1648,8 +1652,8 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 375px;
-            height: 575px;
+            width: 350px;
+            height: 600px;
             background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(124, 58, 237, 0.2), 0 4px 16px rgba(0, 0, 0, 0.15);
@@ -1721,9 +1725,12 @@
         }
 
         @keyframes statusPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
             }
+
             50% {
                 box-shadow: 0 0 0 4px rgba(16, 185, 129, 0);
             }
@@ -1963,6 +1970,7 @@
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -2255,41 +2263,23 @@
             animation: none !important;
         }
 
-        /* Mobile Backdrop Overlay */
-        .chat-mobile-backdrop {
-            display: none;
-        }
+        /* Mobile & Tablet Responsive - Fullscreen chat like ChatGPT app */
+        @media (max-width: 1024px) {
 
-        /* Mobile Responsive Styles */
-        @media (max-width: 768px) {
-            /* Show backdrop on mobile when chat is open */
-            .chat-mobile-backdrop {
-                display: block;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.5);
-                backdrop-filter: blur(4px);
-                z-index: 10001;
-                animation: fadeIn 0.3s ease;
-            }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                }
-                to {
-                    opacity: 1;
-                }
+            /* Ensure html & body allow fullscreen */
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
             }
 
             /* Position chat widget beside WhatsApp button - perfectly aligned */
             .chat-widget-container {
                 bottom: 20px;
-                right: 95px; /* Position beside WhatsApp icon (20px + 55px + 20px spacing) */
-                z-index: 10002;
+                right: 95px;
             }
 
             /* Make chat toggle button match WhatsApp exactly */
@@ -2321,78 +2311,76 @@
                 margin: 0;
             }
 
-            /* Adjust chat window for mobile - fullscreen app experience (90% viewport) */
+            /* Fullscreen chat window - covers entire viewport including browser bars */
             .chat-window {
                 position: fixed !important;
-                width: 95vw !important;
-                height: 90vh !important;
-                max-width: 95vw;
-                max-height: 90vh;
-                top: 50% !important;
-                left: 50% !important;
-                right: auto !important;
-                bottom: auto !important;
-                transform: translate(-50%, -50%) !important;
-                transform-origin: center;
-                border-radius: 16px;
-                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(124, 58, 237, 0.2);
-                z-index: 10003;
+                inset: 0 !important;
+                width: 100vw !important;
+                height: 100vh !important;
+                max-width: 100vw !important;
+                max-height: 100vh !important;
+                min-width: 100vw !important;
+                min-height: 100vh !important;
+                margin: 0 !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+                border: 0 !important;
+                box-shadow: none !important;
+                transform: none !important;
+                transform-origin: center !important;
+                z-index: 10015 !important;
             }
 
-            /* Override animations for mobile to maintain centering */
+            /* Hide WhatsApp button when chat is open - prevent overlay */
+            body.chat-open .whatsapp-float {
+                display: none !important;
+                visibility: hidden !important;
+                opacity: 0 !important;
+                pointer-events: none !important;
+            }
+
+            /* Also hide WhatsApp popup when chat is open */
+            body.chat-open .whatsapp-popup {
+                display: none !important;
+                visibility: hidden !important;
+            }
+
+            /* Lock body scroll and position when chat is open */
+            body.chat-open {
+                overflow: hidden !important;
+                position: fixed !important;
+                width: 100% !important;
+                height: 100% !important;
+                top: 0 !important;
+                left: 0 !important;
+            }
+
+            /* Mobile-safe animation (no translate that breaks positioning) */
             @keyframes chatWindowEnterMobile {
                 0% {
                     opacity: 0;
-                    transform: translate(-50%, -50%) scale(0.95);
                 }
+
                 100% {
                     opacity: 1;
-                    transform: translate(-50%, -50%) scale(1);
                 }
             }
 
             .chat-window-enter {
-                animation: chatWindowEnterMobile 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards !important;
-            }
-
-            .chat-window.chat-window-enter {
-                transform: translate(-50%, -50%) scale(1) !important;
+                animation: chatWindowEnterMobile 0.25s ease-out forwards !important;
             }
         }
 
         @media (max-width: 480px) {
             .chat-widget-container {
                 bottom: 20px;
-                right: 85px; /* Adjust for smaller screens */
-            }
-
-            /* Keep same size as WhatsApp on small screens */
-            .chat-toggle-btn {
-                width: 55px;
-                height: 55px;
-            }
-
-            .chat-toggle-btn svg {
-                width: 24px;
-                height: 24px;
-            }
-
-            /* Even more fullscreen on very small phones */
-            .chat-window {
-                width: 96vw;
-                height: 92vh;
-                max-width: 96vw;
-                max-height: 92vh;
-                border-radius: 12px;
+                right: 85px;
             }
         }
     </style>
 
     <!-- Chat Widget HTML -->
     <div x-data="chatWidget()" x-cloak class="chat-widget-container" id="chatWidgetRoot">
-
-        <!-- Mobile Backdrop (only visible on mobile when chat is open) -->
-        <div x-show="isOpen" @click="toggleChat()" x-transition class="chat-mobile-backdrop"></div>
 
         <button @click="toggleChat()" x-show="!isOpen" x-transition:enter="chat-btn-enter"
             x-transition:leave="chat-btn-leave" class="chat-toggle-btn">
@@ -2454,12 +2442,12 @@
                         <button @click="sendSuggestion('Qu\'est-ce que Tikamed ?')" class="chat-suggestion-btn">
                             Qu'est-ce que Tikamed ?
                         </button>
-                        <button @click="sendSuggestion('Parlez-moi du produit NCI_BL')" class="chat-suggestion-btn">
-                            Parlez-moi du produit NCI_BL
+                        <button @click="sendSuggestion('Où se trouve votre bureau ?')" class="chat-suggestion-btn">
+                            Où se trouve votre bureau ?
                         </button>
-                        <button @click="sendSuggestion('Montrez-moi les spécifications des implants bone level')"
+                        <button @click="sendSuggestion('Quelles sont les spécifications du NPS_PD36.16 ?')"
                             class="chat-suggestion-btn">
-                            Montrez-moi les spécifications des implants bone level
+                            Quelles sont les spécifications du NPS_PD36.16 ?
                         </button>
                         <button @click="sendSuggestion('Quels produits proposez-vous ?')" class="chat-suggestion-btn">
                             Quels produits proposez-vous ?
@@ -2531,11 +2519,25 @@
                     // Listen for close event from WhatsApp
                     window.addEventListener('close-chat-widget', () => {
                         this.isOpen = false;
+                        // Remove chat-open class from body on mobile
+                        if (window.innerWidth <= 1024) {
+                            document.body.classList.remove('chat-open');
+                        }
                     });
                 },
 
                 toggleChat() {
                     this.isOpen = !this.isOpen;
+
+                    // Add/remove chat-open class on body for mobile
+                    if (window.innerWidth <= 1024) {
+                        if (this.isOpen) {
+                            document.body.classList.add('chat-open');
+                        } else {
+                            document.body.classList.remove('chat-open');
+                        }
+                    }
+
                     if (this.isOpen) {
                         // Close WhatsApp popup if it's open
                         closeWhatsAppPopup();
@@ -2631,13 +2633,13 @@
                 async typeMessage(text, messageIndex, conversationId) {
                     const message = this.messages[messageIndex];
                     if (!message) return; // Message was cleared
-                    
+
                     let currentText = '';
                     for (let i = 0; i < text.length; i++) {
                         // Check if conversation was cleared
                         if (this.conversationId !== conversationId) return;
                         if (!this.messages[messageIndex]) return;
-                        
+
                         currentText += text[i];
                         this.messages[messageIndex].text = currentText;
                         if (i % 10 === 0) this.scrollToBottom();
@@ -2650,7 +2652,7 @@
                     if (!this.currentMessage.trim()) return;
                     const userMessage = this.currentMessage;
                     const currentConversationId = this.conversationId; // Capture current session ID
-                    
+
                     this.messages.push({ text: userMessage, isUser: true });
                     this.currentMessage = '';
                     this.isLoading = true;
@@ -2669,15 +2671,15 @@
                             body: JSON.stringify({ message: userMessage }),
                             signal: this.abortController.signal
                         });
-                        
+
                         // Check if conversation was cleared while waiting for response
                         if (this.conversationId !== currentConversationId) return;
-                        
+
                         const data = await response.json();
-                        
+
                         // Check again after parsing JSON
                         if (this.conversationId !== currentConversationId) return;
-                        
+
                         if (response.ok) {
                             const messageIndex = this.messages.length;
                             this.messages.push({ text: '', isUser: false, type: data.response_type, sources: data.sources || [] });
