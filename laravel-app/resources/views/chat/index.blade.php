@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -21,10 +21,10 @@
     <style>
         :root {
             --primary: #7b2cbf;
-            /* Violet plus sophistiqué */
+            /* Violet plus sophistiquÃ© */
             --primary-light: rgb(174, 69, 174);
             --primary-lighter: rgb(224, 166, 224);
-            /* Violet très clair */
+            /* Violet trÃ¨s clair */
             --primary-dark: rgb(121, 51, 190);
             --secondary: #6c757d;
             --light: #ffffff;
@@ -53,7 +53,7 @@
             font-weight: 600;
         }
 
-        /* Navbar améliorée */
+        /* Navbar amÃ©liorÃ©e */
         .navbar {
             background-color: var(--light) !important;
             box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
@@ -145,7 +145,7 @@
             }
         }
 
-        /* Hero Section améliorée */
+        /* Hero Section amÃ©liorÃ©e */
         .hero-section {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/IMPLANT_2_shutterstock_LYRAETK.jpg');
             background-repeat: no-repeat;
@@ -200,7 +200,7 @@
             border-radius: 2px;
         }
 
-        /* Cards améliorées */
+        /* Cards amÃ©liorÃ©es */
         .service-card {
             transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: none;
@@ -425,7 +425,7 @@
             animation: pulse 4s ease infinite;
         }
 
-        /* Form styling amélioré */
+        /* Form styling amÃ©liorÃ© */
         .form-control,
         .form-select {
             border-radius: 8px;
@@ -613,7 +613,7 @@
 
         .btn-dental:hover {
             background-color: rgb(136, 33, 126);
-            /* Vert plus foncé au survol */
+            /* Vert plus foncÃ© au survol */
             color: white;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(123, 44, 191, 0.1);
@@ -758,7 +758,7 @@
             box-shadow: 0 5px 15px rgba(123, 44, 191, 0.2);
         }
 
-        /* RDV Section - Modifié avec dégradé violet clair */
+        /* RDV Section - ModifiÃ© avec dÃ©gradÃ© violet clair */
         #rdv {
             background: linear-gradient(135deg, var(--primary-lighter), var(--primary-light));
             position: relative;
@@ -832,7 +832,7 @@
             }
         }
 
-        /* Améliorations supplémentaires */
+        /* AmÃ©liorations supplÃ©mentaires */
         .lead {
             font-size: 1.1rem;
             font-weight: 400;
@@ -880,7 +880,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Ã€ propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Produits</a></li>
                     <li class="nav-item ms-lg-3"><a class="btn btn-rdv" href="{{ route('login') }}">Espace client</a>
                     </li>
@@ -904,11 +904,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
                     <h1 class="hero-title mb-4">Excellence en Implantologie Dentaire</h1>
-                    <p class="lead mb-5">TIKAMED offre des protocoles dentaires numériques simples, sûrs et accessibles
+                    <p class="lead mb-5">TIKAMED offre des protocoles dentaires numÃ©riques simples, sÃ»rs et
+                        accessibles
                         en implantologie.</p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#services" class="btn btn-primary btn-lg pulse">
-                            <i class="fas fa-search me-2"></i>Découvrir nos produits
+                            <i class="fas fa-search me-2"></i>DÃ©couvrir nos produits
                         </a>
                     </div>
                 </div>
@@ -919,7 +920,7 @@
     <!-- About Section -->
     <section id="about" class="py-5 bg-light-custom position-relative">
         <div class="container">
-            <h2 class="section-title">À propos de Tikamed</h2>
+            <h2 class="section-title">Ã€ propos de Tikamed</h2>
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
                     <div class="position-relative">
@@ -929,14 +930,15 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <h3 class="mb-4">Tikamed Digital Solutions</h3>
-                    <p class="lead">Tikamed Digital Solutions accompagne les professionnels de santé dentaire avec des
-                        protocoles numériques simples, sûrs et accessibles.</p>
-                    <p>Spécialiste en implantologie, scanner intraoral et impression 3D, nous fournissons des solutions
-                        innovantes et un support dédié pour aider les praticiens à développer leur cabinet grâce à la
+                    <p class="lead">Tikamed Digital Solutions accompagne les professionnels de santÃ© dentaire avec des
+                        protocoles numÃ©riques simples, sÃ»rs et accessibles.</p>
+                    <p>SpÃ©cialiste en implantologie, scanner intraoral et impression 3D, nous fournissons des solutions
+                        innovantes et un support dÃ©diÃ© pour aider les praticiens Ã  dÃ©velopper leur cabinet grÃ¢ce Ã 
+                        la
                         dentisterie digitale.</p>
                     <div class="mt-4" data-aos="fade-up" data-aos-delay="500">
                         <a href="#process" class="btn btn-outline-primary">
-                            <i class="fas fa-arrow-right me-2"></i>Découvrez nos solutions
+                            <i class="fas fa-arrow-right me-2"></i>DÃ©couvrez nos solutions
                         </a>
                     </div>
                 </div>
@@ -949,7 +951,7 @@
         <div class="container">
             <h2 class="section-title">Nos Produits</h2>
             <p class="text-center mb-5 lead mx-auto" style="max-width: 700px;">LYRA ETK offre des protocoles dentaires
-                numériques simples, sûrs et accessibles en implantologie et en prothèse</p>
+                numÃ©riques simples, sÃ»rs et accessibles en implantologie et en prothÃ¨se</p>
 
             <div class="row g-4">
                 <!-- Service 1 : iPhysio -->
@@ -960,8 +962,8 @@
                                 <img src="image/iphysio.png" alt="iPhysio">
                             </div>
                             <h4 class="card-title mb-3">iPhysio</h4>
-                            <p class="card-text">Simplifie et parfait le traitement implantaire grâce à un protocole
-                                digital révolutionnaire, unique, et breveté.</p>
+                            <p class="card-text">Simplifie et parfait le traitement implantaire grÃ¢ce Ã  un protocole
+                                digital rÃ©volutionnaire, unique, et brevetÃ©.</p>
                             <a href="https://www.lyraetk.com/iphysio-protocole-numerique/"
                                 class="btn btn-en-savoir-plus">En savoir +</a>
                         </div>
@@ -976,24 +978,24 @@
                                 <img src="image/CONSOMMABLES2_PICTOS-SITE.jpg" alt="Implants dentaires">
                             </div>
                             <h4 class="card-title mb-3">Implants dentaires</h4>
-                            <p class="card-text">Des caractéristiques éprouvées depuis 30 ans et validées par des
-                                organismes indépendants.</p>
+                            <p class="card-text">Des caractÃ©ristiques Ã©prouvÃ©es depuis 30 ans et validÃ©es par des
+                                organismes indÃ©pendants.</p>
                             <a href="https://www.lyraetk.com/je-suis-dentiste/implants-dentaires/"
                                 class="btn btn-en-savoir-plus">En savoir +</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Service 3 : Chirurgie guidée -->
+                <!-- Service 3 : Chirurgie guidÃ©e -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card card h-100">
                         <div class="card-body p-5 text-center">
                             <div class="service-icon circle-img">
-                                <img src="image/chirugie.png" alt="Chirurgie guidée">
+                                <img src="image/chirugie.png" alt="Chirurgie guidÃ©e">
                             </div>
-                            <h4 class="card-title mb-3">Chirurgie guidée</h4>
-                            <p class="card-text">Une trousse simple et un système ergonomique apportant confort de
-                                travail et sécurité.</p>
+                            <h4 class="card-title mb-3">Chirurgie guidÃ©e</h4>
+                            <p class="card-text">Une trousse simple et un systÃ¨me ergonomique apportant confort de
+                                travail et sÃ©curitÃ©.</p>
                             <a href="https://www.lyraetk.com/je-suis-dentiste/chirurgie-guidee/"
                                 class="btn btn-en-savoir-plus">En savoir +</a>
                         </div>
@@ -1014,7 +1016,7 @@
         <div class="container">
             <h2 class="section-title">Les avantages des implants LYRA ETK</h2>
             <p class="text-center mb-5 lead mx-auto" style="max-width: 700px;">
-                Découvrez pourquoi les professionnels choisissent notre solution d'implantologie
+                DÃ©couvrez pourquoi les professionnels choisissent notre solution d'implantologie
             </p>
 
             <div class="row">
@@ -1025,7 +1027,7 @@
                             <div class="advantage-text">
                                 <div class="advantage-number">1</div>
                                 <h4>MADE IN FRANCE</h4>
-                                <p>Production totalement maîtrisée avec des standards de qualité européens.</p>
+                                <p>Production totalement maÃ®trisÃ©e avec des standards de qualitÃ© europÃ©ens.</p>
                             </div>
                             <img src="image/MACARON-Qualite-FR_2023-1.png" alt="Made in France" class="advantage-image">
                         </div>
@@ -1039,7 +1041,7 @@
                             <div class="advantage-text">
                                 <div class="advantage-number">2</div>
                                 <h4>30 ANS DE RECUL CLINIQUE</h4>
-                                <p>Topographie et pureté validées pour une ostéointégration optimale.</p>
+                                <p>Topographie et puretÃ© validÃ©es pour une ostÃ©ointÃ©gration optimale.</p>
                             </div>
                             <img src="image/MACARON-ReculClinique-FR_2023-30ans-1.png" alt="Recul clinique"
                                 class="advantage-image">
@@ -1053,10 +1055,10 @@
                         <div class="advantage-content">
                             <div class="advantage-text">
                                 <div class="advantage-number">3</div>
-                                <h4>15 ANS DE RECUL PROTHÉTIQUE</h4>
-                                <p>Connexion étanche certifiée pour une durabilité exceptionnelle.</p>
+                                <h4>15 ANS DE RECUL PROTHÃ‰TIQUE</h4>
+                                <p>Connexion Ã©tanche certifiÃ©e pour une durabilitÃ© exceptionnelle.</p>
                             </div>
-                            <img src="image/MACARON-ReculClinique-FR_2023-15ans.png" alt="Prothèse"
+                            <img src="image/MACARON-ReculClinique-FR_2023-15ans.png" alt="ProthÃ¨se"
                                 class="advantage-image">
                         </div>
                     </div>
@@ -1068,10 +1070,10 @@
                         <div class="advantage-content">
                             <div class="advantage-text">
                                 <div class="advantage-number">4</div>
-                                <h4>GAMME SIMPLIFIÉE</h4>
-                                <p>Une connectique unique pour tous les diamètres d'implants.</p>
+                                <h4>GAMME SIMPLIFIÃ‰E</h4>
+                                <p>Une connectique unique pour tous les diamÃ¨tres d'implants.</p>
                             </div>
-                            <img src="image/Picto-cad-cam.png" alt="Gamme simplifiée" class="advantage-image">
+                            <img src="image/Picto-cad-cam.png" alt="Gamme simplifiÃ©e" class="advantage-image">
                         </div>
                     </div>
                 </div>
@@ -1082,8 +1084,8 @@
                         <div class="advantage-content">
                             <div class="advantage-text">
                                 <div class="advantage-number">5</div>
-                                <h4>PROTOCOLE SIMPLIFIÉ</h4>
-                                <p>iPhysio réduit par 2 les manipulations et le nombre de pièces utilisées.</p>
+                                <h4>PROTOCOLE SIMPLIFIÃ‰</h4>
+                                <p>iPhysio rÃ©duit par 2 les manipulations et le nombre de piÃ¨ces utilisÃ©es.</p>
                             </div>
                             <img src="image/iphysio.png" alt="Protocole iPhysio" class="advantage-image">
                         </div>
@@ -1102,21 +1104,21 @@
             </p>
 
             <div class="row justify-content-center align-items-center">
-                <!-- Partenaire 1 - Centré -->
+                <!-- Partenaire 1 - CentrÃ© -->
                 <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="zoom-in">
                     <div class="partner-item h-100 d-flex align-items-center justify-content-center">
                         <img src="image/LyraETK.png" alt="Lyra ETK" class="" style="max-height: 80px;">
                     </div>
                 </div>
 
-                <!-- Partenaire 2 - Centré -->
+                <!-- Partenaire 2 - CentrÃ© -->
                 <div class="col-md-4 text-center mb-4 mb-md-0" data-aos="zoom-in" data-aos-delay="100">
                     <div class="partner-item h-100 d-flex align-items-center justify-content-center">
                         <img src="image/Alliedstar.png" alt="Alliedstar" class="" style="max-height: 200px;">
                     </div>
                 </div>
 
-                <!-- Partenaire 3 - Centré -->
+                <!-- Partenaire 3 - CentrÃ© -->
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="200">
                     <div class="partner-item h-100 d-flex align-items-center justify-content-center">
                         <img src="image/SprintRay.png" alt="SprintRay" class="" style="max-height: 80px;">
@@ -1146,7 +1148,7 @@
                             <div class="p-4 bg-white rounded shadow-sm h-100">
                                 <i class="fas fa-map-marker-alt fa-2x mb-3" style="color: var(--primary);"></i>
                                 <h5>Rabat</h5>
-                                <p>Zone industrielle, Salé Tabriquet Lot 1234 Salé</p>
+                                <p>Zone industrielle, SalÃ© Tabriquet Lot 1234 SalÃ©</p>
                                 <p><a href="tel:05377-00154" class="text-decoration-none"
                                         style="color: var(--primary);">05377-00154</a></p>
                             </div>
@@ -1180,7 +1182,8 @@
                 <div class="col-lg-4">
                     <img src="{{ asset('image/logoTikamed.png') }}" alt="Logo" class="w-40 h-auto" width="150px"
                         height="auto">
-                    <p>LYRA ETK offre des protocoles dentaires numériques simples, sûrs et accessibles en implantologie.
+                    <p>LYRA ETK offre des protocoles dentaires numÃ©riques simples, sÃ»rs et accessibles en
+                        implantologie.
                     </p>
                     <div class="mt-4">
                         <a href="https://www.facebook.com/profile.php?id=61560998099607&locale=fr_FR"
@@ -1202,7 +1205,7 @@
                     <h5 class="text-white mb-4">Liens rapides</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#home" class="text-white-50">Accueil</a></li>
-                        <li class="mb-2"><a href="#about" class="text-white-50">À propos</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white-50">Ã€ propos</a></li>
                         <li class="mb-2"><a href="#services" class="text-white-50">Produits</a></li>
                         <li class="mb-2"><a href="#Partenaires" class="text-white-50">Partenaires</a></li>
                     </ul>
@@ -1213,22 +1216,22 @@
                     <ul class="list-unstyled">
                         <li class="mb-2"><a href="#services" class="text-white-50">iPhysio</a></li>
                         <li class="mb-2"><a href="#services" class="text-white-50">Implants dentaires</a></li>
-                        <li class="mb-2"><a href="#services" class="text-white-50">Chirurgie guidée</a></li>
+                        <li class="mb-2"><a href="#services" class="text-white-50">Chirurgie guidÃ©e</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-4">
-                    <h5 class="text-white mb-4">Adresse et Téléphone</h5>
+                    <h5 class="text-white mb-4">Adresse et TÃ©lÃ©phone</h5>
                     <ul class="list-unstyled text-white-50">
                         <li class="mb-3">
                             <strong>Adresse :</strong> 23, Rue Ibnou Majid Al Bahar Casablanca, Morocco<br>
-                            <strong>Téléphone :</strong> <a href="tel:05222-72787"
+                            <strong>TÃ©lÃ©phone :</strong> <a href="tel:05222-72787"
                                 class="text-white">05222-72787</a><br>
                             <strong>Email :</strong> contact@tikamed.com
                         </li>
                         <li class="mb-3">
-                            <strong>Adresse :</strong> Zone industrielle, Salé Tabriquet Lot 1234 Salé, Rabat<br>
-                            <strong>Téléphone :</strong> <a href="tel:05377-00154" class="text-white">05377-00154</a>
+                            <strong>Adresse :</strong> Zone industrielle, SalÃ© Tabriquet Lot 1234 SalÃ©, Rabat<br>
+                            <strong>TÃ©lÃ©phone :</strong> <a href="tel:05377-00154" class="text-white">05377-00154</a>
                         </li>
                         <li class="mb-3">
                             <strong>Adresse :</strong> Ave Mohamed 5 centre d'affaire taleb 120 Etg2 Bureau 15 -
@@ -1243,14 +1246,14 @@
 
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 small text-white-50">&copy; 2025 Tikamed. Tous droits réservés.</p>
+                    <p class="mb-0 small text-white-50">&copy; 2025 Tikamed. Tous droits rÃ©servÃ©s.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-white-50 small">Mentions légales</a></li>
-                        <li class="list-inline-item"><span class="text-white-50">•</span></li>
-                        <li class="list-inline-item"><a href="#" class="text-white-50 small">Confidentialité</a></li>
-                        <li class="list-inline-item"><span class="text-white-50">•</span></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50 small">Mentions lÃ©gales</a></li>
+                        <li class="list-inline-item"><span class="text-white-50">â€¢</span></li>
+                        <li class="list-inline-item"><a href="#" class="text-white-50 small">ConfidentialitÃ©</a></li>
+                        <li class="list-inline-item"><span class="text-white-50">â€¢</span></li>
                         <li class="list-inline-item"><a href="#" class="text-white-50 small">CGU</a></li>
                     </ul>
                 </div>
@@ -1304,19 +1307,19 @@
         // Form submission handlers
         document.getElementById('appointmentForm')?.addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Votre demande de rendez-vous a été envoyée avec succès. Nous vous contacterons sous 24h.');
+            alert('Votre demande de rendez-vous a Ã©tÃ© envoyÃ©e avec succÃ¨s. Nous vous contacterons sous 24h.');
             this.reset();
         });
 
         document.getElementById('avisForm')?.addEventListener('submit', function (e) {
             e.preventDefault();
-            alert('Merci pour votre avis. Après modération, il sera publié sur notre site.');
+            alert('Merci pour votre avis. AprÃ¨s modÃ©ration, il sera publiÃ© sur notre site.');
             this.reset();
         });
     </script>
     <!-- WhatsApp Floating Button avec Popup -->
     <div class="whatsapp-float">
-        <a href="#" class="whatsapp-link" onclick="closeChatWidget(); openWhatsAppPopup(); return false;">
+        <a href="#" class="whatsapp-link" onclick="openWhatsAppFromLauncher(); return false;">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
@@ -1330,7 +1333,7 @@
             </div>
             <div class="popup-body">
                 <div class="message-bubble">
-                    <p>Bonjour, bienvenue à TIKAMED comment puis-je vous aider?</p>
+                    <p>Bonjour, bienvenue Ã  TIKAMED comment puis-je vous aider?</p>
                 </div>
             </div>
             <div class="popup-footer">
@@ -1345,9 +1348,14 @@
         /* Styles pour le bouton WhatsApp flottant */
         .whatsapp-float {
             position: fixed;
-            bottom: 12px;
-            right: 25px;
+            bottom: 24px;
+            right: 94px;
             z-index: 10004;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .whatsapp-float.chat-open {
+            right: 24px;
         }
 
         .whatsapp-link {
@@ -1505,17 +1513,22 @@
             animation: slideInUp 0.3s ease-out;
         }
 
-        /* Pour les écrans mobiles */
-        @media (max-width: 768px) {
+        /* Pour les Ã©crans mobiles */
+        @media (max-width: 1024px),
+        (hover: none) and (pointer: coarse) {
             .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
+                bottom: calc(16px + env(safe-area-inset-bottom));
+                right: 84px;
+            }
+
+            .whatsapp-float.chat-open {
+                right: 16px;
             }
 
             .whatsapp-link {
-                width: 55px;
-                height: 55px;
-                font-size: 26px;
+                width: 56px;
+                height: 56px;
+                font-size: 27px;
             }
 
             .whatsapp-popup {
@@ -1525,7 +1538,7 @@
             }
         }
 
-        /* Overlay pour fermer en cliquant à l'extérieur */
+        /* Overlay pour fermer en cliquant Ã  l'extÃ©rieur */
         .popup-overlay {
             display: none;
             position: fixed;
@@ -1543,15 +1556,69 @@
     </style>
 
     <script>
-        function openWhatsAppPopup() {
+        function positionWhatsAppPopup() {
             const popup = document.getElementById('whatsappPopup');
-            const overlay = document.createElement('div');
-            overlay.className = 'popup-overlay';
-            overlay.onclick = closeWhatsAppPopup;
-            document.body.appendChild(overlay);
+            const wa = document.querySelector('.whatsapp-float');
+            if (!popup || !wa) return;
 
-            popup.classList.add('show');
-            overlay.classList.add('show');
+            const waRect = wa.getBoundingClientRect();
+            const rightOffset = Math.max(16, window.innerWidth - waRect.right);
+            const bottomOffset = Math.max(80, window.innerHeight - waRect.top + 12);
+
+            popup.style.right = `${rightOffset}px`;
+            popup.style.bottom = `${bottomOffset}px`;
+        }
+
+        function openWhatsAppPopup(waitForSwap = false) {
+            const popup = document.getElementById('whatsappPopup');
+            const wa = document.querySelector('.whatsapp-float');
+            if (!popup) return;
+
+            const showPopup = () => {
+                const existingOverlay = document.querySelector('.popup-overlay');
+                const overlay = existingOverlay || document.createElement('div');
+                overlay.className = 'popup-overlay';
+                overlay.onclick = closeWhatsAppPopup;
+                if (!existingOverlay) document.body.appendChild(overlay);
+
+                positionWhatsAppPopup();
+                popup.classList.add('show');
+                overlay.classList.add('show');
+                requestAnimationFrame(positionWhatsAppPopup);
+            };
+
+            if (!wa) {
+                showPopup();
+                return;
+            }
+
+            wa.classList.remove('chat-open');
+
+            if (!waitForSwap) {
+                showPopup();
+                return;
+            }
+
+            let hasOpened = false;
+            const openOnce = () => {
+                if (hasOpened) return;
+                hasOpened = true;
+                wa.removeEventListener('transitionend', onSwapEnd);
+                showPopup();
+            };
+
+            const onSwapEnd = (event) => {
+                if (event.target === wa && event.propertyName === 'right') openOnce();
+            };
+
+            wa.addEventListener('transitionend', onSwapEnd);
+            setTimeout(openOnce, 500);
+        }
+
+        function openWhatsAppFromLauncher() {
+            const wasChatOpen = document.body.classList.contains('cw-open');
+            closeChatWidget();
+            openWhatsAppPopup(wasChatOpen);
         }
 
         function closeWhatsAppPopup() {
@@ -1574,26 +1641,75 @@
             closeWhatsAppPopup();
         }
 
+        function updateChatMobileOffset() {
+            const root = document.documentElement;
+            const nav = document.querySelector('.navbar');
+            const safeMin = 64;
+            let topOffset = 84;
+
+            if (nav) {
+                // Use the fixed top row (brand/toggler) as anchor, not expanded collapse height.
+                const anchor = nav.querySelector('.navbar-brand') || nav.querySelector('.navbar-toggler');
+                if (anchor) {
+                    const anchorRect = anchor.getBoundingClientRect();
+                    topOffset = Math.max(safeMin, Math.round(anchorRect.bottom + 42));
+                } else {
+                    const rect = nav.getBoundingClientRect();
+                    topOffset = Math.max(safeMin, Math.round(rect.bottom + 42));
+                }
+            }
+
+            root.style.setProperty('--cw-mobile-top-offset', `${topOffset}px`);
+        }
+
+        function closeMobileNavbarMenu() {
+            const menu = document.getElementById('navbarNav');
+            const toggler = document.querySelector('.navbar-toggler');
+            if (!menu) return;
+
+            if (window.bootstrap && typeof window.bootstrap.Collapse === 'function') {
+                try {
+                    const instance = window.bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false });
+                    instance.hide();
+                } catch (_) { }
+            }
+
+            menu.classList.remove('show');
+            menu.style.removeProperty('height');
+            if (toggler) toggler.setAttribute('aria-expanded', 'false');
+        }
+
         // Fermer le popup avec la touche ESC
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
                 closeWhatsAppPopup();
             }
         });
+
+        window.addEventListener('resize', function () {
+            const popup = document.getElementById('whatsappPopup');
+            if (popup && popup.classList.contains('show')) {
+                positionWhatsAppPopup();
+            }
+            updateChatMobileOffset();
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth <= 1024) updateChatMobileOffset();
+        }, { passive: true });
+
+        document.addEventListener('DOMContentLoaded', updateChatMobileOffset);
     </script>
 
-    <!-- Chat Widget Styles -->
+    <!-- Chat Widget Styles - Intercom-Inspired Redesign -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-        * {
-            box-sizing: border-box;
-        }
-
+        /* ===== LAUNCHER BUTTON ===== */
         .chat-widget-container {
             position: fixed;
-            bottom: 12px;
-            right: 120px;
+            bottom: 24px;
+            right: 24px;
             z-index: 10002;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
@@ -1602,373 +1718,427 @@
             display: none !important;
         }
 
-        /* Chat Toggle Button - Clean Professional Style */
-        .chat-toggle-btn {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(139, 92, 246, 0.95) 100%);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 14px 24px;
+        .chat-launcher {
+            position: relative;
+            width: 60px;
             height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c3fc5 0%, #9b59f5 100%);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(108, 63, 197, 0.45);
             display: flex;
             align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35), 0 0 0 0 rgba(124, 58, 237, 0.3);
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            animation: pulse-glow 3s infinite;
+            justify-content: center;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        @keyframes pulse-glow {
-
-            0%,
-            100% {
-                box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35), 0 0 0 0 rgba(124, 58, 237, 0.3);
-            }
-
-            50% {
-                box-shadow: 0 4px 16px rgba(124, 58, 237, 0.35), 0 0 15px 4px rgba(124, 58, 237, 0.15);
-            }
+        .chat-launcher:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 28px rgba(108, 63, 197, 0.5);
         }
 
-        .chat-toggle-btn:hover {
-            box-shadow: 0 6px 24px rgba(124, 58, 237, 0.45), 0 0 20px 6px rgba(124, 58, 237, 0.2);
-            transform: translateY(-2px);
+        .chat-launcher svg {
+            width: 26px;
+            height: 26px;
+            color: #fff;
         }
 
-        .chat-toggle-btn svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* Chat Window - AWS/LiveChat Inspired */
-        .chat-window {
+        .chat-launcher-badge {
             position: absolute;
-            bottom: 0;
+            top: -2px;
+            right: -2px;
+            width: 18px;
+            height: 18px;
+            background: #ef4444;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            font-size: 10px;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+
+        /* ===== CHAT WINDOW ===== */
+        .cw-window {
+            position: absolute;
+            bottom: 72px;
             right: 0;
-            width: 350px;
-            height: 600px;
-            background: linear-gradient(180deg, #faf5ff 0%, #ffffff 100%);
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(124, 58, 237, 0.2), 0 4px 16px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(124, 58, 237, 0.1);
+            width: 360px;
+            height: min(520px, calc(100vh - 100px));
+            max-height: calc(100vh - 100px);
+            background: linear-gradient(145deg, #5c31c0 0%, #8b5cf6 60%, #a78bfa 100%);
+            border-radius: 20px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             overflow: hidden;
             transform-origin: bottom right;
         }
 
-        /* Header - Clean and Minimal */
-        .chat-header {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.85) 0%, rgba(139, 92, 246, 0.9) 100%);
-            backdrop-filter: blur(10px);
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 2px 12px rgba(124, 58, 237, 0.12);
+        /* ===== HEADER (banner style) ===== */
+        .cw-header {
+            background: linear-gradient(145deg, #5c31c0 0%, #8b5cf6 60%, #a78bfa 100%);
+            padding: 20px 18px 22px;
+            color: #fff;
+            flex-shrink: 0;
             position: relative;
-        }
-
-        .chat-header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-        }
-
-        .chat-header-left {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-        }
-
-        .chat-header-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
-        .chat-header-title {
-            font-weight: 600;
-            color: white;
-            font-size: 15px;
+            overflow: hidden;
             margin: 0;
-            line-height: 1.3;
+            border-radius: 0;
+            transition: all 0.4s ease;
         }
 
-        .chat-header-status {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.9);
+        .cw-header.shrink {
+            padding: 12px 18px;
         }
 
-        .chat-status-dot {
-            width: 8px;
-            height: 8px;
-            background: #10b981;
-            border-radius: 50%;
-            animation: statusPulse 2s ease-in-out infinite;
-            box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-        }
-
-        @keyframes statusPulse {
-
-            0%,
-            100% {
-                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-            }
-
-            50% {
-                box-shadow: 0 0 0 4px rgba(16, 185, 129, 0);
-            }
-        }
-
-        .chat-menu-btn {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            cursor: pointer;
-            padding: 9px;
-            border-radius: 10px;
-            transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .chat-menu-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-1px);
-        }
-
-        .chat-menu-btn svg {
-            width: 16px;
-            height: 16px;
-        }
-
-
-
-        .chat-menu-dropdown {
-            position: absolute;
-            top: 64px;
-            left: 16px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            min-width: 200px;
-            z-index: 1000;
+        .cw-header .cw-greeting {
+            transition: all 0.4s ease;
+            max-height: 200px;
+            opacity: 1;
             overflow: hidden;
         }
 
-        .chat-menu-item {
-            padding: 12px 16px;
-            cursor: pointer;
-            border: none;
-            background: white;
-            width: 100%;
-            text-align: left;
-            font-size: 14px;
-            color: #374151;
-            transition: background 0.2s;
+        .cw-header.shrink .cw-greeting {
+            max-height: 0;
+            opacity: 0;
+            margin: 0;
+        }
+
+        .cw-header.shrink .cw-header-top {
+            margin-bottom: 0;
+        }
+
+        .cw-header::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .cw-header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -30px;
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .cw-header-top {
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
         }
 
-        .chat-menu-item:hover {
-            background: #f9fafb;
+        .cw-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .chat-menu-item.danger {
-            color: #dc2626;
-        }
-
-        .chat-menu-item.danger:hover {
-            background: #fee2e2;
-        }
-
-        .chat-minimize-btn {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
-            cursor: pointer;
-            padding: 9px;
-            border-radius: 10px;
-            transition: all 0.2s;
+        .cw-brand-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.35);
         }
 
-        .chat-minimize-btn:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-1px);
+        .cw-brand-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
-        .chat-minimize-btn svg {
-            width: 16px;
-            height: 16px;
+        .cw-brand-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
         }
 
-        /* Messages Area - Clean Background */
-        .chat-messages {
+        .cw-close-btn {
+            background: rgba(255, 255, 255, 0.18);
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #fff;
+            transition: all 0.2s ease;
+        }
+
+        .cw-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(1px);
+        }
+
+        .cw-close-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .cw-greeting {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cw-greeting h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            color: #fff;
+            line-height: 1.25;
+        }
+
+        .cw-greeting p {
+            font-size: 13px;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.45;
+        }
+
+        /* ===== HOME SCREEN ===== */
+        .cw-home {
             flex: 1;
             overflow-y: auto;
-            padding: 15px 16px;
-            background: linear-gradient(180deg, rgba(124, 58, 237, 0.02) 0%, transparent 100%);
             display: flex;
             flex-direction: column;
-            gap: 14px;
+            margin-top: -18px;
+            padding: 0 14px 14px;
+            position: relative;
+            z-index: 2;
         }
 
-        /* Scrollbar Styling */
-        .chat-messages::-webkit-scrollbar {
-            width: 6px;
+        .cw-home::-webkit-scrollbar {
+            width: 4px;
         }
 
-        .chat-messages::-webkit-scrollbar-track {
-            background: transparent;
+        .cw-home::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
         }
 
-        .chat-messages::-webkit-scrollbar-thumb {
-            background: rgba(124, 58, 237, 0.2);
-            border-radius: 10px;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb:hover {
-            background: rgba(124, 58, 237, 0.4);
-        }
-
-        /* Onboarding Screen - AWS Style */
-        .chat-onboarding {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            height: 100%;
-            padding: 24px 16px;
-        }
-
-        .chat-onboarding-header {
-            margin-bottom: 20px;
-        }
-
-        .chat-onboarding-title {
-            font-size: 20px;
-            font-weight: 700;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(139, 92, 246, 0.95) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 0 0 8px 0;
-            line-height: 1.3;
-        }
-
-        .chat-onboarding-desc {
-            font-size: 13px;
-            color: #6b7280;
+        .cw-topics-card {
+            background: #fff;
+            border-radius: 14px;
             margin: 0;
-            line-height: 1.5;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
         }
 
-        .chat-suggestions {
+        .cw-topics-label {
+            padding: 12px 16px 9px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        .cw-topic-item {
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 16px;
+            cursor: pointer;
+            border-top: 1px solid #f3f4f6;
+            transition: all 0.15s ease;
+            gap: 12px;
         }
 
-        /* Suggestion Buttons - AWS/LiveChat Style */
-        .chat-suggestion-btn {
-            background: white;
-            border: 2px solid rgba(124, 58, 237, 0.2);
-            border-radius: 12px;
-            padding: 12px 14px;
+        .cw-topic-item:first-of-type {
+            border-top: none;
+        }
+
+        .cw-topic-item:hover {
+            background: #f8fafc;
+        }
+
+        .cw-topic-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+        }
+
+        .cw-topic-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .cw-topic-icon svg {
+            width: 15px;
+            height: 15px;
+            color: #6b7280;
+        }
+
+        .cw-topic-text {
             font-size: 13px;
+            font-weight: 500;
             color: #1f2937;
+            line-height: 1.35;
+        }
+
+        .cw-topic-chevron {
+            color: #d1d5db;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .cw-topic-item:hover .cw-topic-chevron {
+            transform: translateX(3px);
+            color: #9ca3af;
+        }
+
+        .cw-topic-chevron svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .cw-start-chat-card {
+            background: #fff;
+            border-radius: 14px;
+            margin: 10px 14px 14px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        }
+
+        .cw-start-chat-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            margin-bottom: 10px;
+        }
+
+        .cw-start-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #6c3fc5, #9b59f5);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 14px;
+            font-weight: 600;
             cursor: pointer;
             text-align: left;
-            transition: all 0.3s ease;
-            font-family: inherit;
-            font-weight: 500;
-            position: relative;
-            line-height: 1.4;
-            box-shadow: 0 2px 4px rgba(124, 58, 237, 0.05);
-        }
-
-        .chat-suggestion-btn:hover {
-            border-color: rgba(124, 58, 237, 0.6);
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.04), rgba(168, 85, 247, 0.04));
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.12);
-        }
-
-        /* Message Row */
-        .chat-msg-row {
             display: flex;
+            align-items: center;
             gap: 10px;
-            align-items: flex-start;
-            margin-bottom: 4px;
+            font-family: inherit;
+            transition: opacity 0.2s, transform 0.2s;
         }
 
-        .chat-msg-row.user {
+        .cw-start-btn:hover {
+            opacity: 0.95;
+            transform: scale(1.02);
+        }
+
+        .cw-start-btn svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ===== MESSAGES SCREEN ===== */
+        .cw-messages-screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .cw-messages-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 16px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .cw-messages-area::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .cw-messages-area::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+        }
+
+        /* Message rows */
+        .cw-msg-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+        }
+
+        .cw-msg-row.user {
             justify-content: flex-end;
         }
 
-        /* Avatar - Clean Circle */
-        .chat-msg-avatar {
-            width: 32px;
-            height: 32px;
-            min-width: 32px;
+        .cw-msg-av {
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #7C3AED, #a855f7);
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
+            flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
         }
 
-        .chat-msg-content {
-            flex: 1;
-            max-width: 85%;
+        .cw-msg-av img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
-        .chat-msg-row.user .chat-msg-content {
-            flex: unset;
-            max-width: 75%;
-        }
-
-        /* Chat Bubbles - Professional Style */
-        .chat-bubble {
-            padding: 12px 16px;
-            border-radius: 16px;
-            font-size: 13px;
+        .cw-bubble {
+            max-width: 240px;
+            min-width: 60px;
+            padding: 10px 14px;
+            border-radius: 18px;
+            font-size: 13.5px;
             line-height: 1.5;
             word-wrap: break-word;
-            animation: slideIn 0.3s ease-out;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            animation: cwSlideIn 0.25s ease-out;
         }
 
-        @keyframes slideIn {
+        @keyframes cwSlideIn {
             from {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(8px);
             }
 
             to {
@@ -1977,741 +2147,1257 @@
             }
         }
 
-        .chat-bubble.bot {
-            background: #ffffff;
+        .cw-bubble.bot {
+            background: #fff;
             color: #1f2937;
-            border: 1px solid rgba(124, 58, 237, 0.15);
-            border-top-left-radius: 4px;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
         }
 
-        .chat-bubble.user {
-            background: linear-gradient(135deg, #7C3AED 0%, #a855f7 100%);
-            color: #ffffff;
-            border-top-right-radius: 4px;
-            font-weight: 500;
+        .cw-bubble.user {
+            background: linear-gradient(135deg, #6c3fc5, #9b59f5);
+            color: #fff;
+            border-bottom-right-radius: 4px;
+            box-shadow: 0 2px 10px rgba(108, 63, 197, 0.3);
             margin-left: auto;
-            box-shadow: 0 2px 12px rgba(124, 58, 237, 0.3);
         }
 
-        .chat-bubble.bot p {
-            margin: 0 0 8px 0;
+        .cw-bubble.bot p {
+            margin: 0 0 6px 0;
         }
 
-        .chat-bubble.bot p:last-child {
+        .cw-bubble.bot p:last-child {
             margin-bottom: 0;
         }
 
-        .chat-bubble.bot ul,
-        .chat-bubble.bot ol {
-            margin: 8px 0;
-            padding-left: 20px;
+        .cw-bubble.bot ul,
+        .cw-bubble.bot ol {
+            margin: 6px 0;
+            padding-left: 18px;
         }
 
-        .chat-bubble.bot li {
-            margin-bottom: 4px;
+        .cw-bubble.bot li {
+            margin-bottom: 3px;
         }
 
-        .chat-bubble.bot strong {
+        .cw-bubble.bot strong {
             font-weight: 600;
             color: #111827;
         }
 
-        .chat-bubble.bot code {
+        .cw-bubble.bot code {
             background: #f3f4f6;
-            padding: 2px 6px;
+            padding: 2px 5px;
             border-radius: 4px;
-            font-size: 13px;
-            font-family: 'Courier New', monospace;
+            font-size: 12px;
         }
 
-        .chat-bubble.bot a {
-            color: #667eea;
+        .cw-bubble.bot a {
+            color: #7c3aed;
             text-decoration: none;
             font-weight: 500;
         }
 
-        .chat-bubble.bot a:hover {
+        .cw-bubble.bot a:hover {
             text-decoration: underline;
         }
 
-        /* Badge - Minimal Style */
-        .chat-badge {
-            display: inline-block;
-            font-size: 10px;
-            padding: 4px 10px;
-            border-radius: 12px;
-            margin-top: 6px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .chat-badge.faq {
-            background: #d1fae5;
-            color: #047857;
-        }
-
-        .chat-badge.rag {
-            background: #e0e7ff;
-            color: #4338ca;
-        }
-
-        .chat-badge.web_search {
-            background: #fed7aa;
-            color: #c2410c;
-        }
-
-        .chat-badge.fallback {
-            background: #e5e7eb;
-            color: #6b7280;
-        }
-
-        /* Loading Animation */
-        .chat-loading-dots {
+        /* Typing indicator */
+        .cw-typing {
             display: flex;
-            gap: 6px;
+            gap: 5px;
             align-items: center;
-            justify-content: center;
+            padding: 12px 14px;
         }
 
-        /* Compact bubble for loading dots only */
-        .chat-bubble.bot:has(.chat-loading-dots) {
-            width: fit-content;
-            min-width: 60px;
-            padding: 10px 16px;
-        }
-
-        .chat-loading-dot {
-            width: 8px;
-            height: 8px;
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.85), rgba(168, 85, 247, 0.9));
+        .cw-dot {
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
-            animation: chatBounce 1.4s infinite ease-in-out;
-            box-shadow: 0 0 4px rgba(124, 58, 237, 0.25);
+            background: #a78bfa;
+            animation: cwDot 1.3s infinite ease-in-out;
         }
 
-        .chat-loading-dot:nth-child(2) {
-            animation-delay: 0.16s;
+        .cw-dot:nth-child(2) {
+            animation-delay: 0.15s;
         }
 
-        .chat-loading-dot:nth-child(3) {
-            animation-delay: 0.32s;
+        .cw-dot:nth-child(3) {
+            animation-delay: 0.30s;
         }
 
-        @keyframes chatBounce {
+        @keyframes cwDot {
 
             0%,
             80%,
             100% {
-                transform: scale(0.8);
+                transform: scale(0.75);
                 opacity: 0.5;
             }
 
             40% {
-                transform: scale(1.2);
+                transform: scale(1.1);
                 opacity: 1;
             }
         }
 
-        /* Input Area - Clean Bottom Bar */
-        .chat-input-area {
-            padding: 14px 16px;
-            background: white;
-            border-top: 1px solid rgba(124, 58, 237, 0.1);
-            box-shadow: 0 -2px 8px rgba(124, 58, 237, 0.05);
+        /* ===== INPUT BAR ===== */
+        .cw-input-bar {
+            padding: 12px 14px;
+            background: #fff;
+            border-top: 1px solid #f0f0f4;
         }
 
-        .chat-input-form {
+        .cw-input-form {
             display: flex;
-            gap: 10px;
             align-items: center;
-        }
-
-        .chat-input {
-            flex: 1;
-            background: white;
-            border: 1px solid rgba(124, 58, 237, 0.2);
+            gap: 8px;
+            background: #f4f4f8;
             border-radius: 24px;
-            padding: 11px 16px;
-            font-size: 13px;
-            color: #111827;
-            outline: none;
-            transition: all 0.3s ease;
-            font-family: inherit;
+            padding: 6px 6px 6px 14px;
+            border: 1.5px solid transparent;
+            transition: border-color 0.2s;
         }
 
-        .chat-input::placeholder {
+        .cw-input-form:focus-within {
+            border-color: #a78bfa;
+            background: #faf9ff;
+        }
+
+        .cw-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 13.5px;
+            color: #111827;
+            font-family: inherit;
+            padding: 5px 0;
+        }
+
+        .cw-input::placeholder {
             color: #9ca3af;
         }
 
-        .chat-input:focus {
-            border-color: rgba(124, 58, 237, 0.6);
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
-        }
-
-        .chat-send-btn {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.9) 0%, rgba(168, 85, 247, 0.95) 100%);
-            color: white;
+        .cw-send-btn {
+            background: linear-gradient(135deg, #6c3fc5, #9b59f5);
             border: none;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            min-width: 40px;
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: opacity 0.2s, transform 0.2s;
             flex-shrink: 0;
-            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.25);
         }
 
-        .chat-send-btn:hover:not(:disabled) {
-            background: linear-gradient(135deg, rgba(109, 40, 217, 0.95) 0%, rgba(147, 51, 234, 1) 100%);
+        .cw-send-btn:hover:not(:disabled) {
+            opacity: 0.88;
             transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
         }
 
-        .chat-send-btn:disabled {
-            opacity: 0.4;
+        .cw-send-btn:disabled {
+            opacity: 0.35;
             cursor: not-allowed;
         }
 
-        .chat-send-btn svg {
+        .cw-send-btn svg {
+            width: 16px;
+            height: 16px;
+            color: #fff;
+        }
+
+        /* ===== BOTTOM NAV REMOVED ===== */
+        .cw-bottom-nav {
+            display: none;
+        }
+
+        .cw-nav-tab svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ===== BACK BUTTON ===== */
+        .cw-back-btn {
+            background: rgba(255, 255, 255, 0.18);
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #fff;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .cw-back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .cw-back-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes cwWindowIn {
+            from {
+                opacity: 0;
+                transform: scale(0.93) translateY(12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes cwWindowOut {
+            from {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+
+            to {
+                opacity: 0;
+                transform: scale(0.95) translateY(8px);
+            }
+        }
+
+        .cw-enter {
+            animation: cwWindowIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+
+        .cw-leave {
+            animation: cwWindowOut 0.2s ease-in forwards;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 1024px),
+        (hover: none) and (pointer: coarse) {
+            .cw-header .cw-greeting {
+                max-height: none !important;
+            }
+
+            body.cw-open {
+                overflow: hidden !important;
+            }
+        }
+    </style>
+
+    <style>
+        :root {
+            --cw-mobile-top-offset: 84px;
+        }
+
+        .chat-launcher {
+            background: #7C3AED;
+            box-shadow: 0 10px 28px rgba(124, 58, 237, 0.34);
+        }
+
+        .cw-window {
+            width: 366px;
+            height: min(510px, calc(100vh - 220px));
+            max-height: calc(100vh - 220px);
+            bottom: 78px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            background: #f4f4f6;
+            box-shadow: 0 22px 56px rgba(20, 20, 26, 0.26);
+        }
+
+        .cw-window.cw-home-mode {
+            height: min(510px, calc(100vh - 220px));
+            max-height: calc(100vh - 220px);
+        }
+
+        .cw-header {
+            padding: 14px 16px 8px;
+            background: linear-gradient(180deg, #f9faff 0%, #f4f4f6 100%);
+            border-bottom: 1px solid #e4e6ec;
+        }
+
+        .cw-header-top {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cw-brand {
+            gap: 0;
+        }
+
+        .cw-brand-avatar {
+            display: none;
+        }
+
+        .cw-brand-name {
+            color: #111827;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .cw-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cw-action-btn {
+            width: 30px;
+            height: 30px;
+            border: 0;
+            border-radius: 50%;
+            color: #7C3AED;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .cw-action-btn:hover {
+            background: rgba(124, 58, 237, 0.1);
+            transform: none;
+        }
+
+        .cw-action-btn svg {
             width: 18px;
             height: 18px;
         }
 
-        /* Smooth Elegant Animations */
-        @keyframes chatBtnEnter {
-            0% {
+        .cw-greeting {
+            text-align: left;
+            padding: 14px 14px 13px;
+            margin: 10px 0 8px;
+            border-radius: 18px;
+            border: 1px solid #ddd7f6;
+            background: linear-gradient(145deg, #fbfbff 0%, #f1effd 58%, #e7e2fb 100%);
+            box-shadow: 0 11px 24px rgba(124, 58, 237, 0.11);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cw-greeting::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 110px;
+            left: -52px;
+            bottom: -70px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(167, 139, 250, 0.2) 0%, rgba(167, 139, 250, 0) 72%);
+        }
+
+        .cw-greeting::after {
+            content: '';
+            position: absolute;
+            width: 158px;
+            height: 158px;
+            right: -52px;
+            top: -72px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.22) 0%, rgba(124, 58, 237, 0) 70%);
+        }
+
+        .cw-home-logo {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 10px;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 2px 6px rgba(124, 58, 237, 0.14));
+        }
+
+        .cw-greeting h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #111827;
+            line-height: 1.16;
+            letter-spacing: -0.01em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cw-greeting p {
+            margin: 6px 0 0;
+            color: #465066;
+            font-size: 13px;
+            line-height: 1.42;
+            max-width: 250px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cw-home {
+            margin-top: 0;
+            padding: 0 12px 4px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .cw-topics-card {
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .cw-topics-label {
+            display: none;
+        }
+
+        .cw-topic-item {
+            padding: 8px 2px;
+            border-top: 1px solid #d7dbe2;
+            gap: 0;
+        }
+
+        .cw-topic-item:first-of-type {
+            border-top: none;
+        }
+
+        .cw-topic-item:hover {
+            background: #f3ebff;
+            border-radius: 10px;
+        }
+
+        .cw-topic-left {
+            align-items: center;
+            gap: 8px;
+        }
+
+        .cw-topic-left::before {
+            content: '↗';
+            color: #7C3AED;
+            font-size: 19px;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .cw-topic-icon {
+            display: none;
+        }
+
+        .cw-topic-text {
+            font-size: 13px;
+            color: #1f2937;
+            font-weight: 500;
+            line-height: 1.25;
+        }
+
+        .cw-topic-chevron {
+            display: none;
+        }
+
+        .cw-messages-screen {
+            padding: 0 12px;
+            background: #f4f4f5;
+        }
+
+        .cw-messages-area {
+            padding: 10px 0 8px;
+        }
+
+        .cw-msg-av {
+            width: 26px;
+            height: 26px;
+            border: none;
+            background: transparent;
+        }
+
+        .cw-bubble {
+            max-width: 286px;
+            border-radius: 18px;
+            font-size: 13px;
+            box-shadow: none;
+        }
+
+        .cw-bubble.bot {
+            border: 1px solid #e5e7ee;
+            background: #f7f8fb;
+            padding: 10px 12px;
+            border-radius: 14px;
+            color: #20242d;
+        }
+
+        .cw-bubble.user {
+            background: #7C3AED;
+            color: #fff;
+            border-bottom-right-radius: 18px;
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        .cw-input-bar {
+            margin: 6px 12px 12px;
+            padding: 0;
+            border: none;
+            box-shadow: none;
+            background: transparent;
+            flex-shrink: 0;
+        }
+
+        .cw-input-form {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            min-height: 44px;
+            padding: 6px 8px 6px 11px;
+            border: 1.5px solid #d5d7df;
+            border-radius: 22px;
+            background: #f2f2f4;
+        }
+
+        .cw-input-form:focus-within {
+            border-color: #7C3AED;
+            background: #f2f2f4;
+        }
+
+        .cw-input {
+            flex: 1;
+            min-height: 20px;
+            max-height: 62px;
+            border: none;
+            outline: none;
+            resize: none;
+            overflow-y: hidden;
+            background: transparent;
+            color: #1f2937;
+            font-size: 14px;
+            line-height: 1.4;
+            font-family: inherit;
+            padding: 1px 0 0;
+            margin: 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .cw-input::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        .cw-input::placeholder {
+            color: #6b7280;
+        }
+
+        .cw-send-btn {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            border-radius: 50%;
+            border: none;
+            background: #7C3AED;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cw-send-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .cw-send-btn:hover:not(:disabled) {
+            transform: none;
+            background: #6d2fe0;
+        }
+
+        .cw-send-btn:disabled {
+            opacity: 1;
+            background: #d9d2e9;
+            color: #ffffff;
+        }
+
+        .cw-bubble.cw-typing-bubble {
+            width: 54px;
+            min-width: 54px;
+            padding: 6px 8px;
+            border: 1px solid #e5e7ee;
+            background: #f7f8fb;
+            box-shadow: none;
+        }
+
+        .cw-typing {
+            padding: 0;
+            gap: 4px;
+            justify-content: center;
+        }
+
+        .cw-dot {
+            width: 4px;
+            height: 4px;
+            background: #7C3AED;
+        }
+
+        @keyframes cwSheetIn {
+            from {
                 opacity: 0;
-                transform: scale(0.6) translateY(10px);
+                transform: translateY(100%);
             }
 
-            60% {
+            to {
                 opacity: 1;
-                transform: scale(1.05);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
+                transform: translateY(0);
             }
         }
 
-        @keyframes chatBtnLeave {
-            0% {
-                opacity: 1;
-                transform: scale(1);
+        /* ===== MOBILE BOTTOM SHEET ===== */
+        @media (max-width: 1024px),
+        (hover: none) and (pointer: coarse) {
+            body.cw-open {
+                overflow: hidden !important;
             }
 
-            100% {
-                opacity: 0;
-                transform: scale(0.8);
-            }
-        }
-
-
-
-        /* Smooth window opening */
-        @keyframes chatWindowEnter {
-            0% {
-                opacity: 0;
-                transform: scale(0.94) translateY(12px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-        }
-
-        /* Smooth window closing */
-        @keyframes chatWindowLeave {
-            0% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
-
-            100% {
-                opacity: 0;
-                transform: scale(0.96) translateY(8px);
-            }
-        }
-
-        .chat-btn-enter {
-            animation: chatBtnEnter 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-            animation-delay: 0.35s;
-        }
-
-        .chat-btn-leave {
-            animation: chatBtnLeave 0.25s ease-out forwards;
-        }
-
-        .chat-window-enter {
-            animation: chatWindowEnter 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-
-        .chat-window-leave {
-            animation: chatWindowLeave 0.25s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards;
-        }
-
-        .chat-menu-dropdown {
-            opacity: 1 !important;
-            animation: none !important;
-        }
-
-        /* Mobile & Tablet Responsive - Fullscreen chat like ChatGPT app */
-        @media (max-width: 1024px) {
-
-            /* Ensure html & body allow fullscreen */
-            html,
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow-x: hidden;
-            }
-
-            /* Position chat widget beside WhatsApp button - perfectly aligned */
             .chat-widget-container {
-                bottom: 20px;
-                right: 95px;
-            }
-
-            /* Make chat toggle button match WhatsApp exactly */
-            .chat-toggle-btn {
-                width: 55px;
-                height: 55px;
-                padding: 0;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 0;
-                box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
-                animation: pulse-glow 3s infinite;
-            }
-
-            .chat-toggle-btn:hover {
-                box-shadow: 0 6px 28px rgba(124, 58, 237, 0.6);
-            }
-
-            /* Hide text on mobile, show only icon */
-            .chat-toggle-btn span {
-                display: none;
-            }
-
-            .chat-toggle-btn svg {
-                width: 24px;
-                height: 24px;
-                margin: 0;
-            }
-
-            /* Fullscreen chat window - covers entire viewport including browser bars */
-            .chat-window {
                 position: fixed !important;
-                inset: 0 !important;
-                width: 100vw !important;
-                height: 100vh !important;
-                max-width: 100vw !important;
-                max-height: 100vh !important;
-                min-width: 100vw !important;
-                min-height: 100vh !important;
-                margin: 0 !important;
-                padding: 0 !important;
-                border-radius: 0 !important;
-                border: 0 !important;
-                box-shadow: none !important;
-                transform: none !important;
-                transform-origin: center !important;
-                z-index: 10015 !important;
+                left: 0 !important;
+                right: 0 !important;
+                bottom: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                pointer-events: none;
+                z-index: 10010;
             }
 
-            /* Hide WhatsApp button when chat is open - prevent overlay */
-            body.chat-open .whatsapp-float {
-                display: none !important;
-                visibility: hidden !important;
+            .chat-launcher {
+                width: 56px;
+                height: 56px;
+                pointer-events: auto;
+                position: fixed;
+                right: 16px;
+                bottom: calc(16px + env(safe-area-inset-bottom));
+            }
+
+            .cw-window {
+                position: fixed !important;
+                top: var(--cw-mobile-top-offset) !important;
+                bottom: 0 !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+                /* Allow top/bottom pinning to determine height */
+                max-height: none !important;
+                border-radius: 20px 20px 0 0 !important;
+                pointer-events: auto;
+                margin: 0 !important;
+                transform: translateY(0);
+                opacity: 1;
+                z-index: 10020 !important;
+            }
+
+            .cw-window.cw-enter {
+                animation: cwSheetIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+            }
+
+            .cw-home,
+            .cw-messages-screen {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .cw-greeting {
+                padding: 18px 16px 16px !important;
+                margin: 14px 0 12px !important;
+                border-radius: 22px !important;
+            }
+
+            .cw-home-logo {
+                width: 36px !important;
+                height: 36px !important;
+                margin-bottom: 12px !important;
+            }
+
+            .cw-greeting h2 {
+                font-size: 30px !important;
+                line-height: 1.14 !important;
+            }
+
+            .cw-greeting p {
+                margin-top: 8px !important;
+                font-size: 15px !important;
+                line-height: 1.5 !important;
+                max-width: 320px !important;
+            }
+
+            .cw-topic-item {
+                padding: 13px 6px !important;
+            }
+
+            .cw-topic-left {
+                gap: 12px !important;
+            }
+
+            .cw-topic-left::before {
+                font-size: 22px !important;
+            }
+
+            .cw-topic-text {
+                font-size: 17px !important;
+                line-height: 1.34 !important;
+            }
+
+            .cw-action-btn {
+                width: 38px !important;
+                height: 38px !important;
+            }
+
+            .cw-action-btn svg {
+                width: 21px !important;
+                height: 21px !important;
+            }
+
+            .cw-msg-av {
+                width: 36px !important;
+                height: 36px !important;
+            }
+
+            .cw-msg-row {
+                gap: 11px !important;
+            }
+
+            .cw-bubble {
+                max-width: calc(100vw - 90px) !important;
+                font-size: 17px !important;
+                line-height: 1.6 !important;
+            }
+
+            .cw-bubble.user {
+                padding: 15px 20px !important;
+            }
+
+            .cw-bubble.bot {
+                padding: 15px 18px !important;
+            }
+
+            .cw-input-bar {
+                margin: 12px 14px 16px !important;
+            }
+
+            .cw-input-form {
+                min-height: 58px !important;
+                padding: 10px 12px 10px 16px !important;
+                border-radius: 26px !important;
+            }
+
+            .cw-input {
+                min-height: 26px !important;
+                max-height: 78px !important;
+                font-size: 17px !important;
+                line-height: 1.45 !important;
+            }
+
+            .cw-send-btn {
+                width: 40px !important;
+                height: 40px !important;
+                min-width: 40px !important;
+            }
+
+            .cw-send-btn svg {
+                width: 18px !important;
+                height: 18px !important;
+            }
+
+            .whatsapp-float.chat-open {
                 opacity: 0 !important;
                 pointer-events: none !important;
-            }
-
-            /* Also hide WhatsApp popup when chat is open */
-            body.chat-open .whatsapp-popup {
-                display: none !important;
-                visibility: hidden !important;
-            }
-
-            /* Lock body scroll and position when chat is open */
-            body.chat-open {
-                overflow: hidden !important;
-                position: fixed !important;
-                width: 100% !important;
-                height: 100% !important;
-                top: 0 !important;
-                left: 0 !important;
-            }
-
-            /* Mobile-safe animation (no translate that breaks positioning) */
-            @keyframes chatWindowEnterMobile {
-                0% {
-                    opacity: 0;
-                }
-
-                100% {
-                    opacity: 1;
-                }
-            }
-
-            .chat-window-enter {
-                animation: chatWindowEnterMobile 0.25s ease-out forwards !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .chat-widget-container {
-                bottom: 20px;
-                right: 85px;
+                transform: scale(0.9);
             }
         }
     </style>
 
     <!-- Chat Widget HTML -->
-    <div x-data="chatWidget()" x-cloak class="chat-widget-container" id="chatWidgetRoot">
+    <div x-data="tikaChatWidget()" x-cloak class="chat-widget-container" id="tikaChatRoot">
 
-        <button @click="toggleChat()" x-show="!isOpen" x-transition:enter="chat-btn-enter"
-            x-transition:leave="chat-btn-leave" class="chat-toggle-btn">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z">
-                </path>
+        <!-- Launcher -->
+        <button @click="openChat()" x-show="!isOpen" class="chat-launcher" aria-label="Ouvrir le chat">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
             </svg>
-            <span>Discuter avec l'IA</span>
         </button>
 
-        <div x-show="isOpen" x-transition:enter="chat-window-enter" x-transition:leave="chat-window-leave"
-            class="chat-window" :class="{ 'chat-window-enter': isOpen }">
-            <div class="chat-header">
-                <div class="chat-header-left">
-                    <button @click="showMenu = !showMenu" class="chat-menu-btn">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <circle cx="5" cy="12" r="2" />
-                            <circle cx="12" cy="12" r="2" />
-                            <circle cx="19" cy="12" r="2" />
-                        </svg>
-                    </button>
-                    <div class="chat-header-info">
-                        <h3 class="chat-header-title">Assistant Tikamed</h3>
-                        <div class="chat-header-status">
-                            <span class="chat-status-dot"></span>
-                            <span>En ligne</span>
+        <!-- Chat Window -->
+        <div x-show="isOpen" :class="['cw-window', 'cw-enter', activeTab === 'home' ? 'cw-home-mode' : '']">
+
+            <!-- HEADER -->
+            <div class="cw-header">
+                <div class="cw-header-top">
+                    <div class="cw-brand">
+                        <div class="cw-brand-avatar">
+                            <img src="{{ asset('image/Untitled_design__2_-removebg-preview.png') }}" alt="Tikamed">
                         </div>
+                        <span class="cw-brand-name">Tikamed</span>
+                    </div>
+
+                    <div class="cw-actions">
+                        <!-- Clear chat (only on messages tab) -->
+                        <template x-if="activeTab === 'messages' && messages.length > 0">
+                            <button @click="clearChat()" class="cw-action-btn" title="Effacer conversation">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                </svg>
+                            </button>
+                        </template>
+
+                        <button @click="closeChat()" class="cw-action-btn" title="Fermer">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-                <button @click="toggleChat()" class="chat-minimize-btn">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M20 12H4"></path>
-                    </svg>
-                </button>
 
-                <div x-show="showMenu" @click.away="showMenu = false" x-transition class="chat-menu-dropdown">
-                    <button @click="clearConversation()" class="chat-menu-item danger">
-                        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
-                            </path>
-                        </svg>
-                        Effacer la conversation
-                    </button>
+                <!-- Greeting (only shown when not shrunk) -->
+                <div x-show="activeTab === 'home'" class="cw-greeting">
+                    <img class="cw-home-logo" src="{{ asset('image/Untitled_design__2_-removebg-preview.png') }}"
+                        alt="Tikamed">
+                    <h2>Comment puis-je vous aider aujourd'hui ?</h2>
+                    <p>Posez vos questions sur nos produits, implants ou support.</p>
                 </div>
             </div>
 
-            <div x-ref="messagesContainer" class="chat-messages">
-                <!-- Onboarding screen - shown before first interaction -->
-                <div x-show="messages.length === 0" class="chat-onboarding">
-                    <div class="chat-onboarding-header">
-                        <h2 class="chat-onboarding-title">Demandez à Tikamed</h2>
-                        <p class="chat-onboarding-desc">Obtenez des conseils et recommandations sur les implants
-                            dentaires, les solutions prothétiques et les spécifications techniques.</p>
+            <!-- HOME TAB -->
+            <div x-show="activeTab === 'home'" class="cw-home">
+
+                <!-- Quick suggestions -->
+                <div class="cw-topics-card">
+                    <div class="cw-topics-label">Questions frequentes</div>
+
+                    <div class="cw-topic-item" @click="sendTopic('Parlez-moi de Tikamed')">
+                        <div class="cw-topic-left">
+                            <div class="cw-topic-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <span class="cw-topic-text">Parlez-moi de Tikamed</span>
+                        </div>
+                        <span class="cw-topic-chevron">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </span>
                     </div>
 
-                    <div class="chat-suggestions">
-                        <button @click="sendSuggestion('Qu\'est-ce que Tikamed ?')" class="chat-suggestion-btn">
-                            Qu'est-ce que Tikamed ?
-                        </button>
-                        <button @click="sendSuggestion('Où se trouve votre bureau ?')" class="chat-suggestion-btn">
-                            Où se trouve votre bureau ?
-                        </button>
-                        <button @click="sendSuggestion('Quelles sont les spécifications du NPS_PD36.16 ?')"
-                            class="chat-suggestion-btn">
-                            Quelles sont les spécifications du NPS_PD36.16 ?
-                        </button>
-                        <button @click="sendSuggestion('Quels produits proposez-vous ?')" class="chat-suggestion-btn">
-                            Quels produits proposez-vous ?
-                        </button>
+                    <div class="cw-topic-item" @click="sendTopic('Ou se trouve votre bureau ?')">
+                        <div class="cw-topic-left">
+                            <div class="cw-topic-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <span class="cw-topic-text">Ou se trouve votre bureau ?</span>
+                        </div>
+                        <span class="cw-topic-chevron">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="cw-topic-item" @click="sendTopic('Montrez-moi vos produits')">
+                        <div class="cw-topic-left">
+                            <div class="cw-topic-icon">
+                                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10" />
+                                </svg>
+                            </div>
+                            <span class="cw-topic-text">Montrez-moi vos produits</span>
+                        </div>
+                        <span class="cw-topic-chevron">
+                            <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Chat conversation - shown after first message -->
-                <div x-show="messages.length > 0">
-                    <template x-for="(msg, index) in messages" :key="index">
-                        <div :class="'chat-msg-row' + (msg.isUser ? ' user' : '')">
-                            <div x-show="!msg.isUser" class="chat-msg-avatar">T</div>
-                            <div class="chat-msg-content">
-                                <div x-show="msg.isUser" class="chat-bubble user" x-text="msg.text"></div>
-                                <div x-show="!msg.isUser" class="chat-bubble bot" x-html="formatMessage(msg.text)">
-                                </div>
+            <!-- MESSAGES TAB -->
+            <div x-show="activeTab === 'messages'" class="cw-messages-screen">
+
+                <div x-ref="msgArea" class="cw-messages-area">
+
+                    <!-- Empty state -->
+                    <template x-if="messages.length === 0">
+                        <div style="text-align:center;padding:30px 20px;color:#9ca3af;">
+                            <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#ede9fe,#ddd6fe);
+                                        display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+                                <svg width="26" height="26" fill="none" stroke="#7c3aed" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                </svg>
                             </div>
+                            <p style="font-size:14px;font-weight:600;color:#374151;margin:0 0 4px;">Demarrer une
+                                conversation</p>
+                            <p style="font-size:12px;margin:0;">Posez votre question ci-dessous.</p>
                         </div>
                     </template>
-                </div>
 
-                <div x-show="isLoading" class="chat-msg-row">
-                    <div class="chat-msg-avatar">T</div>
-                    <div class="chat-msg-content">
-                        <div class="chat-bubble bot">
-                            <div class="chat-loading-dots">
-                                <div class="chat-loading-dot"></div>
-                                <div class="chat-loading-dot"></div>
-                                <div class="chat-loading-dot"></div>
+                    <!-- Messages -->
+                    <template x-for="(msg, idx) in messages" :key="idx">
+                        <div :class="['cw-msg-row', msg.isUser ? 'user' : '']">
+                            <template x-if="!msg.isUser">
+                                <div class="cw-msg-av">
+                                    <img src="{{ asset('image/Untitled_design__2_-removebg-preview.png') }}" alt="Bot">
+                                </div>
+                            </template>
+                            <template x-if="msg.isUser">
+                                <div class="cw-bubble user" x-text="msg.text"></div>
+                            </template>
+                            <template x-if="!msg.isUser">
+                                <div class="cw-bubble bot" x-html="formatMsg(msg.text)"></div>
+                            </template>
+                        </div>
+                    </template>
+
+                    <!-- Typing indicator -->
+                    <div x-show="isLoading" class="cw-msg-row">
+                        <div class="cw-msg-av">
+                            <img src="{{ asset('image/Untitled_design__2_-removebg-preview.png') }}" alt="Bot">
+                        </div>
+                        <div class="cw-bubble bot cw-typing-bubble">
+                            <div class="cw-typing">
+                                <div class="cw-dot"></div>
+                                <div class="cw-dot"></div>
+                                <div class="cw-dot"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <div class="chat-input-area">
-                <form @submit.prevent="sendMessage()" class="chat-input-form">
-                    <input type="text" x-model="currentMessage"
-                        :placeholder="messages.length === 0 ? 'Posez une question...' : 'Écrivez un message...'"
-                        class="chat-input" :disabled="isLoading">
-                    <button type="submit" :disabled="isLoading || !currentMessage.trim()" class="chat-send-btn">
-                        <svg fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+            <!-- Shared Input (home + messages) -->
+            <div class="cw-input-bar">
+                <form @submit.prevent="sendMessage()" class="cw-input-form">
+                    <textarea x-model="inputText" x-ref="inputBox" @input="autoResizeInput()"
+                        @keydown.enter.exact.prevent="sendMessage()" @keydown.shift.enter.stop
+                        placeholder="Posez votre question a Tikamed..." class="cw-input" :disabled="isLoading"
+                        rows="1"></textarea>
+                    <button type="submit" :disabled="isLoading || !inputText.trim()" class="cw-send-btn">
+                        <svg fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18V6m0 0l-4 4m4-4l4 4" />
                         </svg>
                     </button>
                 </form>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <div class="cw-bottom-nav">
+                <button @click="activeTab = 'home'" :class="['cw-nav-tab', activeTab === 'home' ? 'active' : '']">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Accueil
+                </button>
+                <button @click="activeTab = 'messages'"
+                    :class="['cw-nav-tab', activeTab === 'messages' ? 'active' : '']">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                    </svg>
+                    Messages
+                </button>
             </div>
         </div>
     </div>
 
     <script>
-        // Global function to close chat from WhatsApp button
         function closeChatWidget() {
-            window.dispatchEvent(new CustomEvent('close-chat-widget'));
+            window.dispatchEvent(new CustomEvent('close-tika-chat'));
         }
 
-        function chatWidget() {
+        function tikaChatWidget() {
             return {
                 isOpen: false,
+                activeTab: 'home',   // 'home' | 'messages'
                 isLoading: false,
-                currentMessage: '',
+                inputText: '',
                 messages: [],
-                typingSpeed: 15,
-                showMenu: false,
+                typingSpeed: 14,
+                conversationId: Date.now(),
                 abortController: null,
-                conversationId: Date.now(), // Track current conversation session
 
                 init() {
-                    // Listen for close event from WhatsApp
-                    window.addEventListener('close-chat-widget', () => {
+                    window.addEventListener('close-tika-chat', () => {
                         this.isOpen = false;
-                        // Remove chat-open class from body on mobile
-                        if (window.innerWidth <= 1024) {
-                            document.body.classList.remove('chat-open');
+                        this.activeTab = this.messages.length ? 'messages' : 'home';
+                        document.body.classList.remove('cw-open');
+                        const wa = document.querySelector('.whatsapp-float');
+                        if (wa) wa.classList.remove('chat-open');
+                    });
+
+                    window.addEventListener('resize', () => {
+                        if (!this.isOpen) return;
+                        if (this.isMobileViewport()) {
+                            if (typeof updateChatMobileOffset === 'function') updateChatMobileOffset();
                         }
                     });
                 },
 
-                toggleChat() {
-                    this.isOpen = !this.isOpen;
-
-                    // Add/remove chat-open class on body for mobile
-                    if (window.innerWidth <= 1024) {
-                        if (this.isOpen) {
-                            document.body.classList.add('chat-open');
-                        } else {
-                            document.body.classList.remove('chat-open');
-                        }
-                    }
-
-                    if (this.isOpen) {
-                        // Close WhatsApp popup if it's open
-                        closeWhatsAppPopup();
-                        this.$nextTick(() => this.scrollToBottom());
-                    }
+                isMobileViewport() {
+                    return window.innerWidth <= 1024;
                 },
 
-                clearConversation() {
-                    // Abort any ongoing request
+
+
+
+                openChat() {
+                    this.isOpen = true;
+                    if (this.messages.length > 0) this.activeTab = 'messages';
+
+                    if (this.isMobileViewport()) {
+                        closeMobileNavbarMenu();
+                        if (typeof updateChatMobileOffset === 'function') updateChatMobileOffset();
+                    }
+
+                    document.body.classList.add('cw-open');
+
+                    // Toggle WhatsApp position
+                    const wa = document.querySelector('.whatsapp-float');
+                    if (wa) wa.classList.add('chat-open');
+
+                    if (typeof closeWhatsAppPopup === 'function') closeWhatsAppPopup();
+
+                    this.$nextTick(() => {
+                        this.scrollBottom();
+                        this.autoResizeInput();
+                    });
+                },
+
+                closeChat() {
+                    this.isOpen = false;
+                    document.body.classList.remove('cw-open');
+                    const wa = document.querySelector('.whatsapp-float');
+                    if (wa) wa.classList.remove('chat-open');
+                },
+
+                clearChat() {
                     if (this.abortController) {
                         this.abortController.abort();
                         this.abortController = null;
                     }
-                    // Reset state and create new conversation session
-                    this.conversationId = Date.now();
-                    this.isLoading = false;
                     this.messages = [];
-                    this.showMenu = false;
-                    this.$nextTick(() => this.scrollToBottom());
+                    this.isLoading = false;
+                    this.conversationId = Date.now();
+                    this.activeTab = 'home';
+                    this.resetInputHeight();
                 },
 
-                sendSuggestion(text) {
-                    this.currentMessage = text;
-                    this.sendMessage();
+                sendTopic(text) {
+                    this.activeTab = 'messages';
+                    this.$nextTick(() => {
+                        this.inputText = text;
+                        this.sendMessage();
+                    });
                 },
 
-                formatMessage(text) {
+                getPresetAnswer(text) {
+                    const t = (text || '').toLowerCase().trim();
+
+                    if (
+                        t.includes('parlez-moi de tikamed') ||
+                        t.includes('parlez moi de tikamed') ||
+                        t.includes('tell me about tikamed') ||
+                        t.includes('about tikamed')
+                    ) {
+                        return 'Tikamed accompagne les professionnels dentaires avec des systemes implantaires, des solutions prothetiques et un accompagnement du workflow digital. Je peux aussi vous aider a choisir les produits adaptes a votre cas.';
+                    }
+
+                    if (
+                        t.includes('ou se trouve votre bureau') ||
+                        t.includes('ou est votre bureau') ||
+                        t.includes('where is your office') ||
+                        t.includes('office')
+                    ) {
+                        return 'Tikamed est base a Casablanca, avec une disponibilite de support a Rabat. Si vous voulez, je peux vous partager l adresse exacte et les numeros de contact.';
+                    }
+
+                    if (
+                        t.includes('montrez-moi vos produits') ||
+                        t.includes('montrez moi vos produits') ||
+                        t.includes('show me your products') ||
+                        t.includes('products') ||
+                        t.includes('produits')
+                    ) {
+                        return 'Nous proposons des systemes implantaires, des composants prothetiques, des kits chirurgicaux et des solutions digitales pour la planification et le workflow clinique. Dites-moi quelle categorie vous voulez explorer en premier.';
+                    }
+
+                    return null;
+                },
+
+                formatMsg(text) {
                     if (!text) return '';
-                    let s = text;
-                    // Escape HTML entities
-                    s = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-                    // Bold: **text**
-                    s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-                    // Inline code: `code`
-                    s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
-                    // Links: [text](url)
-                    s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+                    let s = text
+                        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/`([^`]+)`/g, '<code>$1</code>')
+                        .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
 
-                    // Process lines for lists and paragraphs
                     const lines = s.split('\n');
-                    let html = '';
-                    let inUl = false;
-                    let inOl = false;
-                    let normalText = [];
+                    let html = '', inUl = false, inOl = false, buf = [];
 
                     for (const line of lines) {
-                        const trimmed = line.trim();
-                        const bulletMatch = trimmed.match(/^[*\-•]\s+(.+)$/);
-                        const numMatch = trimmed.match(/^(\d+)[.)\s]+(.+)$/);
+                        const t = line.trim();
+                        const bul = t.match(/^[*\-]\s+(.+)$/);
+                        const num = t.match(/^(\d+)[.)\s]+(.+)$/);
 
-                        if (bulletMatch) {
-                            // Flush normal text first
-                            if (normalText.length > 0) {
-                                html += '<p>' + normalText.join(' ') + '</p>';
-                                normalText = [];
-                            }
+                        if (bul) {
+                            if (buf.length) { html += '<p>' + buf.join(' ') + '</p>'; buf = []; }
                             if (inOl) { html += '</ol>'; inOl = false; }
                             if (!inUl) { html += '<ul>'; inUl = true; }
-                            html += '<li>' + bulletMatch[1] + '</li>';
-                        } else if (numMatch) {
-                            // Flush normal text first
-                            if (normalText.length > 0) {
-                                html += '<p>' + normalText.join(' ') + '</p>';
-                                normalText = [];
-                            }
+                            html += '<li>' + bul[1] + '</li>';
+                        } else if (num) {
+                            if (buf.length) { html += '<p>' + buf.join(' ') + '</p>'; buf = []; }
                             if (inUl) { html += '</ul>'; inUl = false; }
                             if (!inOl) { html += '<ol>'; inOl = true; }
-                            html += '<li>' + numMatch[2] + '</li>';
+                            html += '<li>' + num[2] + '</li>';
                         } else {
                             if (inUl) { html += '</ul>'; inUl = false; }
                             if (inOl) { html += '</ol>'; inOl = false; }
-                            if (trimmed === '') {
-                                // Empty line - flush current paragraph and add break
-                                if (normalText.length > 0) {
-                                    html += '<p>' + normalText.join(' ') + '</p>';
-                                    normalText = [];
-                                }
+                            if (t === '') {
+                                if (buf.length) { html += '<p>' + buf.join(' ') + '</p>'; buf = []; }
                             } else {
-                                // Normal text - accumulate
-                                normalText.push(trimmed);
+                                buf.push(t);
                             }
                         }
                     }
-                    // Flush any remaining normal text
-                    if (normalText.length > 0) {
-                        html += '<p>' + normalText.join(' ') + '</p>';
-                    }
+                    if (buf.length) html += '<p>' + buf.join(' ') + '</p>';
                     if (inUl) html += '</ul>';
                     if (inOl) html += '</ol>';
                     return html;
                 },
 
-                async typeMessage(text, messageIndex, conversationId) {
-                    const message = this.messages[messageIndex];
-                    if (!message) return; // Message was cleared
-
-                    let currentText = '';
+                async typeMessage(text, idx, cid) {
+                    let cur = '';
                     for (let i = 0; i < text.length; i++) {
-                        // Check if conversation was cleared
-                        if (this.conversationId !== conversationId) return;
-                        if (!this.messages[messageIndex]) return;
-
-                        currentText += text[i];
-                        this.messages[messageIndex].text = currentText;
-                        if (i % 10 === 0) this.scrollToBottom();
-                        await new Promise(resolve => setTimeout(resolve, this.typingSpeed));
+                        if (this.conversationId !== cid || !this.messages[idx]) return;
+                        cur += text[i];
+                        this.messages[idx].text = cur;
+                        if (i % 10 === 0) this.scrollBottom();
+                        await new Promise(r => setTimeout(r, this.typingSpeed));
                     }
-                    this.scrollToBottom();
+                    this.scrollBottom();
                 },
 
                 async sendMessage() {
-                    if (!this.currentMessage.trim()) return;
-                    const userMessage = this.currentMessage;
-                    const currentConversationId = this.conversationId; // Capture current session ID
-
-                    this.messages.push({ text: userMessage, isUser: true });
-                    this.currentMessage = '';
+                    if (!this.inputText.trim()) return;
+                    const userMsg = this.inputText;
+                    const cid = this.conversationId;
+                    this.messages.push({ text: userMsg, isUser: true });
+                    this.inputText = '';
+                    this.resetInputHeight();
                     this.isLoading = true;
-                    this.scrollToBottom();
+                    this.scrollBottom();
 
-                    // Create new abort controller for this request
+                    const presetAnswer = this.getPresetAnswer(userMsg);
+                    if (presetAnswer) {
+                        await new Promise(r => setTimeout(r, 280));
+                        if (this.conversationId !== cid) return;
+                        const idx = this.messages.length;
+                        this.messages.push({ text: '', isUser: false });
+                        this.isLoading = false;
+                        await this.typeMessage(presetAnswer, idx, cid);
+                        this.scrollBottom();
+                        return;
+                    }
+
                     this.abortController = new AbortController();
 
                     try {
-                        const response = await fetch('/chat', {
+                        const resp = await fetch('/chat', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
                                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
                             },
-                            body: JSON.stringify({ message: userMessage }),
+                            body: JSON.stringify({ message: userMsg }),
                             signal: this.abortController.signal
                         });
 
-                        // Check if conversation was cleared while waiting for response
-                        if (this.conversationId !== currentConversationId) return;
+                        if (this.conversationId !== cid) return;
+                        const data = await resp.json();
+                        if (this.conversationId !== cid) return;
 
-                        const data = await response.json();
-
-                        // Check again after parsing JSON
-                        if (this.conversationId !== currentConversationId) return;
-
-                        if (response.ok) {
-                            const messageIndex = this.messages.length;
-                            this.messages.push({ text: '', isUser: false, type: data.response_type, sources: data.sources || [] });
+                        if (resp.ok) {
+                            const idx = this.messages.length;
+                            this.messages.push({ text: '', isUser: false });
                             this.isLoading = false;
-                            await this.typeMessage(data.answer, messageIndex, currentConversationId);
+                            await this.typeMessage(data.answer, idx, cid);
                         } else {
                             this.isLoading = false;
-                            this.messages.push({ text: 'Désolé, je rencontre des difficultés temporaires. Veuillez réessayer dans un instant.', isUser: false });
+                            this.messages.push({
+                                text: 'Desole, je rencontre des difficultes temporaires. Veuillez reessayer.',
+                                isUser: false
+                            });
                         }
-                    } catch (error) {
-                        // Ignore abort errors (user cleared conversation)
-                        if (error.name === 'AbortError') {
-                            console.log('Request aborted');
-                            return;
-                        }
-                        console.error('Chat error:', error);
+                    } catch (e) {
+                        if (e.name === 'AbortError') return;
                         this.isLoading = false;
-                        this.messages.push({ text: 'Une erreur de connexion est survenue. Vérifiez votre connexion internet et réessayez.', isUser: false });
+                        this.messages.push({
+                            text: 'Une erreur de connexion est survenue. Verifiez votre connexion et reessayez.',
+                            isUser: false
+                        });
                     } finally {
                         this.abortController = null;
                         this.isLoading = false;
-                        this.scrollToBottom();
+                        this.scrollBottom();
                     }
                 },
 
-                scrollToBottom() {
+                scrollBottom() {
                     this.$nextTick(() => {
-                        const container = this.$refs.messagesContainer;
-                        if (container) container.scrollTop = container.scrollHeight;
+                        const el = this.$refs.msgArea;
+                        if (el) el.scrollTop = el.scrollHeight;
+                    });
+                },
+
+                autoResizeInput() {
+                    this.$nextTick(() => {
+                        const el = this.$refs.inputBox;
+                        if (!el) return;
+                        el.style.height = 'auto';
+                        const lineHeight = parseFloat(window.getComputedStyle(el).lineHeight) || 21;
+                        const maxHeight = lineHeight * 3;
+                        const nextHeight = Math.min(el.scrollHeight, maxHeight);
+                        el.style.height = nextHeight + 'px';
+                        el.style.overflowY = el.scrollHeight > maxHeight ? 'scroll' : 'hidden';
+                    });
+                },
+
+                resetInputHeight() {
+                    this.$nextTick(() => {
+                        const el = this.$refs.inputBox;
+                        if (!el) return;
+                        el.style.height = 'auto';
+                        el.style.overflowY = 'hidden';
                     });
                 }
-            }
+            };
         }
     </script>
 </body>
